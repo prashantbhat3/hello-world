@@ -403,3 +403,46 @@
 2026-11-25 15:19:26,852 INFO   processed 1000/1063 files
 2026-11-25 15:19:35,447 INFO   processed 1050/1063 files
 2026-11-25 15:19:37,906 INFO   processed 1063/1063 files
+2026-11-25 21:54:58,391 INFO Querying experiments ...
+2026-11-25 21:54:59,011 INFO   4052 experiments
+2026-11-25 21:54:59,012 INFO Querying replicates ...
+2026-11-25 21:54:59,095 INFO   9056 replicates
+2026-11-25 21:54:59,096 INFO Querying libraries ...
+2026-11-25 21:54:59,195 INFO   10618 libraries
+2026-11-25 21:54:59,500 INFO   16035 libraries after fetching 5419 referenced-but-missing
+2026-11-25 21:54:59,500 INFO Querying biosamples ...
+2026-11-25 21:54:59,827 INFO   21416 biosamples
+2026-11-25 21:54:59,857 INFO Querying gene-quantification files ...
+2026-11-25 21:55:00,581 INFO   12498 gene quantification files (all statuses)
+2026-11-25 21:55:00,582 INFO Querying fastq files ...
+2026-11-25 21:55:01,312 INFO   8486 fastq files
+2026-11-25 21:55:01,312 INFO Querying reference GTFs ...
+2026-11-25 21:55:01,775 INFO Eligible experiments: 935 (total_RNA 844, small_RNA 91)
+2026-11-25 21:55:01,836 INFO Fetched 1477 analyses
+2026-11-25 21:55:01,897 INFO Selected 1063 quantification files
+2026-11-25 21:55:05,820 INFO GTF ENCFF824ZKD (GRCh38 V24): {'VTRNA1-1': ['ENSG00000199990.1'], 'VTRNA1-2': ['ENSG00000202111.1'], 'VTRNA1-3': ['ENSG00000202515.1']}
+2026-11-25 21:55:09,125 INFO GTF ENCFF159KBI (GRCh38 V29): {'VTRNA1-1': ['ENSG00000199990.1'], 'VTRNA1-2': ['ENSG00000202111.1'], 'VTRNA1-3': ['ENSG00000202515.1']}
+2026-11-25 21:55:09,125 WARNING No ENCODE reference GTF for GRCh38 V43: genes will be matched by version-stripped stable Ensembl ID resolved from the other ENCODE GTFs
+2026-11-25 21:55:12,279 INFO GTF ENCFF271PVT (hg19 V19): {'VTRNA1-1': ['ENSG00000199990.1'], 'VTRNA1-2': ['ENSG00000202111.1'], 'VTRNA1-3': ['ENSG00000202515.1']}
+2026-11-25 21:55:26,758 INFO   processed 50/1063 files
+2026-11-25 21:55:35,411 INFO   processed 100/1063 files
+2026-11-25 21:55:44,028 INFO   processed 150/1063 files
+2026-11-25 21:55:49,906 INFO   processed 200/1063 files
+2026-11-25 21:55:57,313 INFO   processed 250/1063 files
+2026-11-25 21:56:04,600 INFO   processed 300/1063 files
+2026-11-25 21:56:11,879 INFO   processed 350/1063 files
+2026-11-25 21:56:19,481 INFO   processed 400/1063 files
+2026-11-25 21:56:26,596 INFO   processed 450/1063 files
+2026-11-25 21:56:33,934 INFO   processed 500/1063 files
+2026-11-25 21:56:41,954 INFO   processed 550/1063 files
+2026-11-25 21:56:50,346 INFO   processed 600/1063 files
+2026-11-25 21:56:57,120 INFO   processed 650/1063 files
+2026-11-25 21:57:04,949 INFO   processed 700/1063 files
+2026-11-25 21:57:12,694 INFO   processed 750/1063 files
+2026-11-25 21:57:20,609 INFO   processed 800/1063 files
+2026-11-25 21:57:27,685 INFO   processed 850/1063 files
+2026-11-25 21:57:35,259 INFO   processed 900/1063 files
+2026-11-25 21:57:41,969 INFO   processed 950/1063 files
+2026-11-25 21:57:51,039 INFO   processed 1000/1063 files
+2026-11-25 21:57:57,374 INFO   processed 1050/1063 files
+2026-11-25 21:57:59,480 INFO   processed 1063/1063 files

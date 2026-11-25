@@ -1,7 +1,7 @@
 ==============================================================================
 QC REPORT - ENCODE primary human VTRNA1 atlas
 ==============================================================================
-Run date (UTC): 2026-11-25T15:19:39Z
+Run date (UTC): 2026-11-25T21:58:00Z
 Total ENCODE experiments queried (human, released, RNA-seq family): 4052
   by assay_title: total RNA-seq=1650, shRNA RNA-seq=522, polyA plus RNA-seq=503, CRISPR RNA-seq=461, long read RNA-seq=331, microRNA-seq=246, small RNA-seq=176, CRISPRi RNA-seq=77, siRNA RNA-seq=54, polyA minus RNA-seq=32
 Experiments passing all inclusion criteria (any track): 935

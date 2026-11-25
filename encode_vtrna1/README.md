@@ -71,7 +71,12 @@ Key columns in the wide table:
 * `VTRNA1_x_TPM`, `_expected_count`, `_FPKM`, `_length`, `_effective_length` hold RSEM values.
   They are NA for STAR-count files, which have no such values.
 * `VTRNA1_x_count_sense`, `_CPM` and `_count_unstranded/_strand1/_strand2` hold STAR values.
-  They are NA for RSEM files.
+  They are NA for RSEM files. `_count_unstranded`, `_count_strand1` and `_count_strand2` are
+  columns 2, 3 and 4 of the STAR file verbatim. `_count_sense` is whichever of these matches the
+  library strand (column 4 for the reverse-stranded UW libraries, column 3 for CSHL small RNA).
+* For each gene, the RSEM and STAR columns sit next to each other right after `quant_schema`.
+  Check `quant_schema` to see which set is populated: **UW rows (`STAR_ReadsPerGene`) have
+  empty TPM columns but real read counts.**
 * `VTRNA1_x_measurement_status`, `_quantifiable` and `_na_reason` record measurement validity.
 * `quant_schema`, `library_rna_class`, `vault_rna_suitability`, `library_size_range`,
   `library_depleted_in`, `library_treatments`, `library_documents`, `strandedness`, `read_length`,

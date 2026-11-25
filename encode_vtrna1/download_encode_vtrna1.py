@@ -1228,11 +1228,16 @@ def main(argv=None):
                  "donor_ethnicity", "manipulation_status", "manipulation_details",
                  "experiment_accession", "biological_replicate", "technical_replicates",
                  "biosample_accession", "library_accession", "file_accession", "genome_assembly",
-                 "annotation_version"]
+                 "annotation_version", "quant_schema"]
         genes = []
         for sym in TARGET_SYMBOLS:
             p = sym.replace("-", "_")
-            genes += [c for c in [f"{p}_gene_id", f"{p}_TPM", f"{p}_expected_count", f"{p}_FPKM"] if c in df.columns]
+            # RSEM metrics (TPM/expected_count/FPKM) and STAR read-count metrics (raw columns 2-4,
+            # sense count, CPM) side by side, so whichever the source file provides is visible.
+            genes += [c for c in [f"{p}_gene_id", f"{p}_TPM", f"{p}_expected_count", f"{p}_FPKM",
+                                  f"{p}_count_sense", f"{p}_CPM", f"{p}_count_unstranded",
+                                  f"{p}_count_strand1", f"{p}_count_strand2", f"{p}_measurement_status"]
+                      if c in df.columns]
         rest = [c for c in df.columns if c not in first + genes]
         return df[[c for c in first if c in df.columns] + genes + rest]
 

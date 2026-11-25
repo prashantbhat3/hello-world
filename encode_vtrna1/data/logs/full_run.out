@@ -1,51 +1,50 @@
-2026-11-25 15:16:05,448 INFO Querying experiments ...
-2026-11-25 15:16:05,937 INFO   4052 experiments
-2026-11-25 15:16:05,937 INFO Querying replicates ...
-2026-11-25 15:16:06,035 INFO   9056 replicates
-2026-11-25 15:16:06,035 INFO Querying libraries ...
-2026-11-25 15:16:06,145 INFO   10618 libraries
-2026-11-25 15:16:06,297 INFO   16035 libraries after fetching 5419 referenced-but-missing
-2026-11-25 15:16:06,297 INFO Querying biosamples ...
-2026-11-25 15:16:06,713 INFO   21416 biosamples
-2026-11-25 15:16:06,755 INFO Querying gene-quantification files ...
-2026-11-25 15:16:07,460 INFO   12498 gene quantification files (all statuses)
-2026-11-25 15:16:07,460 INFO Querying fastq files ...
-2026-11-25 15:16:08,257 INFO   8486 fastq files
-2026-11-25 15:16:08,257 INFO Querying reference GTFs ...
-2026-11-25 15:16:08,760 INFO Eligible experiments: 935 (total_RNA 844, small_RNA 91)
-2026-11-25 15:16:17,778 INFO Fetched 1477 analyses
-2026-11-25 15:16:17,875 INFO Selected 1063 quantification files
-2026-11-25 15:16:21,919 INFO GTF ENCFF824ZKD (GRCh38 V24): {'VTRNA1-1': ['ENSG00000199990.1'], 'VTRNA1-2': ['ENSG00000202111.1'], 'VTRNA1-3': ['ENSG00000202515.1']}
-2026-11-25 15:16:25,727 INFO GTF ENCFF159KBI (GRCh38 V29): {'VTRNA1-1': ['ENSG00000199990.1'], 'VTRNA1-2': ['ENSG00000202111.1'], 'VTRNA1-3': ['ENSG00000202515.1']}
-2026-11-25 15:16:25,727 WARNING No ENCODE reference GTF for GRCh38 V43: genes will be matched by version-stripped stable Ensembl ID resolved from the other ENCODE GTFs
-2026-11-25 15:16:29,517 INFO GTF ENCFF271PVT (hg19 V19): {'VTRNA1-1': ['ENSG00000199990.1'], 'VTRNA1-2': ['ENSG00000202111.1'], 'VTRNA1-3': ['ENSG00000202515.1']}
-2026-11-25 15:16:46,550 INFO   processed 50/1063 files
-2026-11-25 15:16:56,415 INFO   processed 100/1063 files
-2026-11-25 15:17:06,107 INFO   processed 150/1063 files
-2026-11-25 15:17:12,944 INFO   processed 200/1063 files
-2026-11-25 15:17:20,712 INFO   processed 250/1063 files
-2026-11-25 15:17:29,404 INFO   processed 300/1063 files
-2026-11-25 15:17:36,710 INFO   processed 350/1063 files
-2026-11-25 15:17:44,902 INFO   processed 400/1063 files
-2026-11-25 15:17:53,490 INFO   processed 450/1063 files
-2026-11-25 15:18:00,913 INFO   processed 500/1063 files
-2026-11-25 15:18:05,700 WARNING Retrying (Retry(total=5, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /2021/05/24/3acad503-f2de-491b-9be6-bb04017f3ce9/ENCFF316JPH.tsv?response-content-disposition=attachment%3B%20filename%3DENCFF316JPH.tsv&AWSAccessKeyId=ASIATGZNGCNXYEKCIIP4&Signature=xpHR6%2ByWvtoXb36SpiHE3P8jq5M%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEN%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQCejagAsM4otynRoCAJTdItNvDrRwlpNDPWzMaiuMTnjAIgeHeP9cpkT5uRZJQ95RzXK4tbMKenoPKi8CWKJZcNdPQqvAUIqP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwyMjA3NDg3MTQ4NjMiDPmN949ZEKa%2F84ONQiqQBQRXwmJWvE2ojxpxDhQWi%2BnR%2FEFtLFM2AmeXWroRduohdcvSJd4dIRbP4HQMRQ%2BQzQWn7CnRgTF1LZ2YzC9WDJdTBgo7o%2Fg%2FZRAmFWv2lp%2B0k2O6f0CALa9TC7HSFanDZ5CCFj6lXDnnqKvd9Pu0bkwtoIs1qRT4D6pv1U4B1y6fuulpkMTqKUFVGBCt9u8oJwyINELgFdNXk%2FbN%2FAWIjwTrMP8rbzB8IsGEHQGNxXP8fCmcTpTtqlD4lR%2BhsQaszHrY3srRCn4IsbuBXmi4t7lTLEateB%2BufE1sxVT3uxhWrMZ3B9kHWcbI%2BgzSL%2BdklYoOIkJcnmjQXFrM6FKmxUQdM36o8eOZb2KipVMo2dlf7%2FP0ikA9pKhICCZ6Cg%2BZskniA6EjvRGLB%2Bgjhu62Hs0DvmMT4BVuxuNYqfB%2BpFsXoClXrhKeXoHLW24dxVgtutLE3P6IPkLHdc8y01CKWdauugU%2FgSDTQaPT68RuRG7koFNnlM7lAYAGjh6%2BPl5Tj%2FsdgbkKBMbPMQ7mXppjuIz4egyTQd0C%2Fvi4RUPQEbFIsRAts%2B7SSIZTU63%2FXp%2BpfqoTWfY32wXopvYqVVlN%2FXNbF6xJNACswkz746hE9betuP1CzT8GF8GgD5iF%2FYMZP8dZUNLqvUoIEe6ndIXr7spyHlsAHsMM5XlUsEYrSiEX9jD%2F5CjQxfebMFY0629lmhXp62KgzrPSun70IR5K6woq12uC4XIriQF3RoPzjNR%2FWWhVa7z3Hz5wgA0LjNTixuDSqI5kBnX0WqnAcMOAydy0KHVyq6GKh2aDZL%2Fgm5uhE%2BS5KHfOrnXukt7eGlKEXePcmuukjXxoZ1wja36%2BO0O5N9XGUs8ipsbgX3RqJE8FMKD3m9gGOrEBEGItFHRtC6EtqzT8JnEsSGNKxFNYvhM5YfPtbP1s0mR5GC0oY7O5OUXpP9Gr%2FuW9QOKct4scYi6PKKM9%2BO8MEedhQpYn5VZO2g3iIHMHccIPMFF6WuRv8tpwgCmjvAbgiCa4zU%2Bvj%2FTo7b%2FUUzzPjwDQkQS8Vb2wya770%2FcDcRcIcQn%2F5qKk%2B6yNQupKjUcTEXDjj5cqnB9WrAfs0IMlKaM35CLbjMGubdoyFNaW3X%2Fw&Expires=1795749485
-2026-11-25 15:18:09,026 INFO   processed 550/1063 files
-2026-11-25 15:18:19,361 INFO   processed 600/1063 files
-2026-11-25 15:18:26,665 INFO   processed 650/1063 files
-2026-11-25 15:18:35,599 INFO   processed 700/1063 files
-2026-11-25 15:18:44,367 INFO   processed 750/1063 files
-2026-11-25 15:18:53,107 INFO   processed 800/1063 files
-2026-11-25 15:19:01,530 INFO   processed 850/1063 files
-2026-11-25 15:19:09,562 INFO   processed 900/1063 files
-2026-11-25 15:19:17,788 INFO   processed 950/1063 files
-2026-11-25 15:19:26,852 INFO   processed 1000/1063 files
-2026-11-25 15:19:35,447 INFO   processed 1050/1063 files
-2026-11-25 15:19:37,906 INFO   processed 1063/1063 files
+2026-11-25 21:54:58,391 INFO Querying experiments ...
+2026-11-25 21:54:59,011 INFO   4052 experiments
+2026-11-25 21:54:59,012 INFO Querying replicates ...
+2026-11-25 21:54:59,095 INFO   9056 replicates
+2026-11-25 21:54:59,096 INFO Querying libraries ...
+2026-11-25 21:54:59,195 INFO   10618 libraries
+2026-11-25 21:54:59,500 INFO   16035 libraries after fetching 5419 referenced-but-missing
+2026-11-25 21:54:59,500 INFO Querying biosamples ...
+2026-11-25 21:54:59,827 INFO   21416 biosamples
+2026-11-25 21:54:59,857 INFO Querying gene-quantification files ...
+2026-11-25 21:55:00,581 INFO   12498 gene quantification files (all statuses)
+2026-11-25 21:55:00,582 INFO Querying fastq files ...
+2026-11-25 21:55:01,312 INFO   8486 fastq files
+2026-11-25 21:55:01,312 INFO Querying reference GTFs ...
+2026-11-25 21:55:01,775 INFO Eligible experiments: 935 (total_RNA 844, small_RNA 91)
+2026-11-25 21:55:01,836 INFO Fetched 1477 analyses
+2026-11-25 21:55:01,897 INFO Selected 1063 quantification files
+2026-11-25 21:55:05,820 INFO GTF ENCFF824ZKD (GRCh38 V24): {'VTRNA1-1': ['ENSG00000199990.1'], 'VTRNA1-2': ['ENSG00000202111.1'], 'VTRNA1-3': ['ENSG00000202515.1']}
+2026-11-25 21:55:09,125 INFO GTF ENCFF159KBI (GRCh38 V29): {'VTRNA1-1': ['ENSG00000199990.1'], 'VTRNA1-2': ['ENSG00000202111.1'], 'VTRNA1-3': ['ENSG00000202515.1']}
+2026-11-25 21:55:09,125 WARNING No ENCODE reference GTF for GRCh38 V43: genes will be matched by version-stripped stable Ensembl ID resolved from the other ENCODE GTFs
+2026-11-25 21:55:12,279 INFO GTF ENCFF271PVT (hg19 V19): {'VTRNA1-1': ['ENSG00000199990.1'], 'VTRNA1-2': ['ENSG00000202111.1'], 'VTRNA1-3': ['ENSG00000202515.1']}
+2026-11-25 21:55:26,758 INFO   processed 50/1063 files
+2026-11-25 21:55:35,411 INFO   processed 100/1063 files
+2026-11-25 21:55:44,028 INFO   processed 150/1063 files
+2026-11-25 21:55:49,906 INFO   processed 200/1063 files
+2026-11-25 21:55:57,313 INFO   processed 250/1063 files
+2026-11-25 21:56:04,600 INFO   processed 300/1063 files
+2026-11-25 21:56:11,879 INFO   processed 350/1063 files
+2026-11-25 21:56:19,481 INFO   processed 400/1063 files
+2026-11-25 21:56:26,596 INFO   processed 450/1063 files
+2026-11-25 21:56:33,934 INFO   processed 500/1063 files
+2026-11-25 21:56:41,954 INFO   processed 550/1063 files
+2026-11-25 21:56:50,346 INFO   processed 600/1063 files
+2026-11-25 21:56:57,120 INFO   processed 650/1063 files
+2026-11-25 21:57:04,949 INFO   processed 700/1063 files
+2026-11-25 21:57:12,694 INFO   processed 750/1063 files
+2026-11-25 21:57:20,609 INFO   processed 800/1063 files
+2026-11-25 21:57:27,685 INFO   processed 850/1063 files
+2026-11-25 21:57:35,259 INFO   processed 900/1063 files
+2026-11-25 21:57:41,969 INFO   processed 950/1063 files
+2026-11-25 21:57:51,039 INFO   processed 1000/1063 files
+2026-11-25 21:57:57,374 INFO   processed 1050/1063 files
+2026-11-25 21:57:59,480 INFO   processed 1063/1063 files
 ==============================================================================
 QC REPORT - ENCODE primary human VTRNA1 atlas
 ==============================================================================
-Run date (UTC): 2026-11-25T15:19:39Z
+Run date (UTC): 2026-11-25T21:58:00Z
 Total ENCODE experiments queried (human, released, RNA-seq family): 4052
   by assay_title: total RNA-seq=1650, shRNA RNA-seq=522, polyA plus RNA-seq=503, CRISPR RNA-seq=461, long read RNA-seq=331, microRNA-seq=246, small RNA-seq=176, CRISPRi RNA-seq=77, siRNA RNA-seq=54, polyA minus RNA-seq=32
 Experiments passing all inclusion criteria (any track): 935
