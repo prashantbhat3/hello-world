@@ -1,0 +1,5 @@
+# Raw ENCODE downloads (re-created by download_encode_vtrna1.py; md5-verified against ENCODE)
+data/quantifications/
+data/references/
+__pycache__/
+*.tmp

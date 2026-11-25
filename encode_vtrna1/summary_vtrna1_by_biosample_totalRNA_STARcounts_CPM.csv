@@ -1,0 +1,18 @@
+biosample_type,biosample_term_name,N_biological_samples,N_experiments,N_donors,median_CPM_VTRNA1_1,n_CPM_gt0_VTRNA1_1,median_CPM_VTRNA1_2,n_CPM_gt0_VTRNA1_2,median_CPM_VTRNA1_3,n_CPM_gt0_VTRNA1_3
+primary cell,CD14-positive monocyte,11,11,3,2.3777898004274185,11,0.0,4,2.0363210038037822,11
+primary cell,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",1,1,1,0.2819229854065386,1,0.0,0,1.409614927032693,1
+primary cell,"CD4-positive, alpha-beta T cell",173,173,5,0.3179929881637559,168,0.0,16,0.8589222081389117,171
+primary cell,"CD8-positive, alpha-beta T cell",44,44,3,0.5345518476084501,43,0.0,4,1.5313518503004417,43
+primary cell,T follicular helper cell,2,2,1,0.5460237910315715,2,0.0,0,2.174870089919589,2
+primary cell,T-cell,29,29,3,0.49072700174782236,27,0.0,4,1.1297873933803497,29
+primary cell,T-helper 1 cell,5,5,5,0.14516164620274555,3,0.0,0,2.177424693041183,5
+primary cell,T-helper 17 cell,2,2,2,0.9281031384156133,2,0.0,0,2.469985607859193,2
+primary cell,T-helper 2 cell,2,2,2,0.9102089450865047,2,0.03207286338762692,1,3.7768625568182514,2
+primary cell,T-helper 9 cell,2,2,2,0.6746703772414504,2,0.0,0,0.7889022040644641,2
+primary cell,"central memory CD4-positive, alpha-beta T cell",3,3,2,0.4730519854397302,3,0.0,0,3.2775744705467025,3
+primary cell,"effector CD4-positive, alpha-beta T cell",1,1,1,0.7111485333272649,1,0.0,0,1.600084199986346,1
+primary cell,"effector CD8-positive, alpha-beta T cell",4,4,3,0.6691573372079812,4,0.0,0,0.8505170144223637,4
+primary cell,"effector memory CD4-positive, alpha-beta T cell",3,3,3,0.3666865960831638,3,0.0,1,1.4060291190284704,3
+primary cell,"effector memory CD8-positive, alpha-beta T cell",9,9,5,0.5879688530448822,9,0.0,0,1.3897445617424489,9
+primary cell,"naive thymus-derived CD4-positive, alpha-beta T cell",1,1,1,0.0,0,0.0,0,0.0,0
+primary cell,"naive thymus-derived CD8-positive, alpha-beta T cell",7,7,5,0.27907314227986013,6,0.0,0,0.6055605394683166,6

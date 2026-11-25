@@ -1,0 +1,4 @@
+track,quant_schema,gene_symbol,metric,n_samples,n_measured,n_quantifiable,n_TPM_gt_0,median_TPM,mean_TPM,max_TPM,median_TPM_quantifiable_only,biosample_with_max,file_with_max
+total_RNA,RSEM_genes_results,VTRNA1-1,TPM,508,508,2,0,0.0,0.0,0.0,0.0,,
+total_RNA,RSEM_genes_results,VTRNA1-2,TPM,508,508,0,0,0.0,0.0,0.0,,,
+total_RNA,RSEM_genes_results,VTRNA1-3,TPM,508,508,0,0,0.0,0.0,0.0,,,

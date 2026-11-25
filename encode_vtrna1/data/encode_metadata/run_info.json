@@ -1,0 +1,18 @@
+{
+  "run_started_utc": "2026-11-25T15:03:05Z",
+  "run_finished_utc": "2026-11-25T15:05:56Z",
+  "encode_base": "https://www.encodeproject.org",
+  "assay_titles_considered": [
+    "total RNA-seq",
+    "small RNA-seq",
+    "polyA plus RNA-seq",
+    "polyA minus RNA-seq",
+    "microRNA-seq",
+    "shRNA RNA-seq",
+    "siRNA RNA-seq",
+    "CRISPR RNA-seq",
+    "CRISPRi RNA-seq",
+    "long read RNA-seq"
+  ],
+  "n_experiments_queried": 4052
+}

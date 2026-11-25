@@ -1,0 +1,4 @@
+track,quant_schema,gene_symbol,metric,n_samples,n_measured,n_quantifiable,n_CPM_gt_0,median_CPM,mean_CPM,max_CPM,median_CPM_quantifiable_only,biosample_with_max,file_with_max
+total_RNA,STAR_ReadsPerGene,VTRNA1-1,CPM,299,299,299,287,0.3910251243138696,0.6460180467319868,5.089315167871061,0.3910251243138696,CD14-positive monocyte,ENCFF564DQW
+total_RNA,STAR_ReadsPerGene,VTRNA1-2,CPM,299,299,299,30,0.0,0.0068812204533760715,0.2716752867423981,0.0,CD14-positive monocyte,ENCFF703TMD
+total_RNA,STAR_ReadsPerGene,VTRNA1-3,CPM,299,299,299,294,1.2661032507200962,1.6727827799139752,11.7363723872716,1.2661032507200962,CD14-positive monocyte,ENCFF703TMD

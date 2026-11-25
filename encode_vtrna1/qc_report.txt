@@ -1,0 +1,346 @@
+==============================================================================
+QC REPORT - ENCODE primary human VTRNA1 atlas
+==============================================================================
+Run date (UTC): 2026-11-25T15:05:56Z
+Total ENCODE experiments queried (human, released, RNA-seq family): 4052
+  by assay_title: total RNA-seq=1650, shRNA RNA-seq=522, polyA plus RNA-seq=503, CRISPR RNA-seq=461, long read RNA-seq=331, microRNA-seq=246, small RNA-seq=176, CRISPRi RNA-seq=77, siRNA RNA-seq=54, polyA minus RNA-seq=32
+Experiments passing all inclusion criteria (any track): 816
+
+--- Track: total RNA-seq (PRIMARY) ---
+Experiments with this assay: 1650
+Experiments passing biosample/perturbation criteria: 725
+  of which with no usable released gene quantification: 0
+Experiments contributing quantifications: 725
+Unique biosample terms: 156
+Unique donors: 297
+Biological samples/replicates (rows): 807
+Quantification files selected/downloaded OK/parsed OK: 807/807/807
+Assembly/annotation/schema: GRCh38 V29 [RSEM_genes_results]: 508; GRCh38 V43 [STAR_ReadsPerGene]: 299
+Biosample types: primary cell=450, tissue=357
+  VTRNA1-1: row present in 807/807 files; status {'present_effective_length_0': 506, 'present': 301}; TPM>0 in 0 (of 508 with TPM); sense read count>0 in 287 (of 299 with counts)
+  VTRNA1-2: row present in 807/807 files; status {'present_effective_length_0': 508, 'present': 299}; TPM>0 in 0 (of 508 with TPM); sense read count>0 in 30 (of 299 with counts)
+  VTRNA1-3: row present in 807/807 files; status {'present_effective_length_0': 508, 'present': 299}; TPM>0 in 0 (of 508 with TPM); sense read count>0 in 294 (of 299 with counts)
+Files with any VTRNA1 gene missing/NA: 0
+Duplicate checks: duplicate file rows=0; duplicate (experiment, bio-rep)=0; library reused across rows=0; biosample reused across rows=0
+Donor x biosample-term groups with >1 row (distinct ENCODE biosamples from the same donor & cell type/tissue; NOT independent donors): 44 groups covering 321 rows; spanning >1 experiment: 32; spanning >1 lab: 3; largest: ENCDO116ULP/CD4-positive, alpha-beta T cell=47, ENCDO833KUM/CD4-positive, alpha-beta T cell=46, ENCDO923WRX/CD4-positive, alpha-beta T cell=38, ENCDO143ACT/CD4-positive, alpha-beta T cell=29
+Rows whose selected file pools >1 technical replicate: 0
+Rows where other technical-replicate files of the same biological replicate exist but were NOT used (one file kept per biological replicate): 13
+[RSEM files n=508] per-file sum(TPM) min=999994 median=1000000 max=1000001 (expect ~1e6); genes/file 59526-59526
+  VTRNA1-1: length=[99.0]; effective_length>0 in 2/508; TPM q(0,50,90,99,100)=[0.0, 0.0, 0.0, 0.0, 0.0]; expected_count q=[0.0, 0.0, 0.0, 0.0, 1.0]; negative=0
+  VTRNA1-2: length=[89.0]; effective_length>0 in 0/508; TPM q(0,50,90,99,100)=[0.0, 0.0, 0.0, 0.0, 0.0]; expected_count q=[0.0, 0.0, 0.0, 0.0, 0.0]; negative=0
+  VTRNA1-3: length=[89.0]; effective_length>0 in 0/508; TPM q(0,50,90,99,100)=[0.0, 0.0, 0.0, 0.0, 0.0]; expected_count q=[0.0, 0.0, 0.0, 0.0, 0.0]; negative=0
+[STAR count files n=299] assigned gene counts/file min=1160407 median=16298612 max=73578701; sense column: count_strand2=295, count_unstranded=4
+  VTRNA1-1: sense count q(0,50,90,99,100)=[0.0, 6.0, 24.0, 62.1, 132.0]; CPM q=[0.0, 0.391, 1.426, 3.35, 5.089]; negative=0
+  VTRNA1-2: sense count q(0,50,90,99,100)=[0.0, 0.0, 0.2, 2.0, 5.0]; CPM q=[0.0, 0.0, 0.007, 0.109, 0.272]; negative=0
+  VTRNA1-3: sense count q(0,50,90,99,100)=[0.0, 17.0, 70.0, 154.2, 283.0]; CPM q=[0.0, 1.266, 3.782, 6.406, 11.736]; negative=0
+Library classes: total RNA, depletion not recorded (size_range not recorded)=549; rRNA-depleted total RNA (size_range >200)=248; total RNA, depletion not recorded (size_range 120-200)=10
+Vault-RNA suitability: uncertain: no RNA size selection recorded=549; poor: RNA size-selected >200 nt; ~100 nt vault RNAs largely excluded=248; poor/uncertain: insert/fragment size range 120-200 recorded; mature vault RNAs (88-100 nt) shorter than typical inserts=10
+
+--- Track: small RNA-seq (SEPARATE) ---
+Experiments with this assay: 176
+Experiments passing biosample/perturbation criteria: 91
+  of which with no usable released gene quantification: 0
+Experiments contributing quantifications: 91
+Unique biosample terms: 57
+Unique donors: 53
+Biological samples/replicates (rows): 129
+Quantification files selected/downloaded OK/parsed OK: 129/129/129
+Assembly/annotation/schema: GRCh38 V24 [STAR_ReadsPerGene]: 129
+Biosample types: tissue=82, primary cell=47
+  VTRNA1-1: row present in 129/129 files; status {'present': 129}; TPM>0 in 0 (of 0 with TPM); sense read count>0 in 129 (of 129 with counts)
+  VTRNA1-2: row present in 129/129 files; status {'present': 129}; TPM>0 in 0 (of 0 with TPM); sense read count>0 in 114 (of 129 with counts)
+  VTRNA1-3: row present in 129/129 files; status {'present': 129}; TPM>0 in 0 (of 0 with TPM); sense read count>0 in 108 (of 129 with counts)
+Files with any VTRNA1 gene missing/NA: 0
+Duplicate checks: duplicate file rows=0; duplicate (experiment, bio-rep)=0; library reused across rows=0; biosample reused across rows=0
+Donor x biosample-term groups with >1 row (distinct ENCODE biosamples from the same donor & cell type/tissue; NOT independent donors): 3 groups covering 10 rows; spanning >1 experiment: 2; spanning >1 lab: 0; largest: ENCDO268AAA/keratinocyte=6, ENCDO793LXB/right lobe of liver=2, ENCDO930BXC/endothelial cell of umbilical vein=2, ENCDO017AAA/skeletal muscle satellite cell=1
+Rows whose selected file pools >1 technical replicate: 0
+Rows where other technical-replicate files of the same biological replicate exist but were NOT used (one file kept per biological replicate): 0
+[STAR count files n=129] assigned gene counts/file min=4633262 median=18700798 max=71862609; sense column: count_strand1=129
+  VTRNA1-1: sense count q(0,50,90,99,100)=[3.0, 661.0, 1836.0, 4411.3, 5265.0]; CPM q=[0.262, 35.769, 119.073, 203.254, 231.416]; negative=0
+  VTRNA1-2: sense count q(0,50,90,99,100)=[0.0, 26.0, 900.6, 2388.8, 3650.0]; CPM q=[0.0, 1.879, 46.653, 136.977, 144.591]; negative=0
+  VTRNA1-3: sense count q(0,50,90,99,100)=[0.0, 6.0, 91.6, 256.0, 1378.0]; CPM q=[0.0, 0.428, 3.388, 10.06, 54.588]; negative=0
+Library classes: small RNA fraction (size_range <200)=129
+Vault-RNA suitability: most suitable: <200 nt fraction retains ~100 nt vault RNAs=129
+
+Failed downloads: 0
+
+--- Gene identifier audit ---
+    track                           pipeline_schema                                                                                         analysis_titles annotation_version_source genome_assembly annotation_version reference_gtf gene_symbol gene_id_in_annotation_gtf gene_id_as_reported  stable_gene_id  number_of_files  number_of_files_present  number_of_files_absent  number_of_files_unavailable_or_unparsed  number_present_with_effective_length_0  n_alternate_files_not_selected
+small_RNA                         STAR_ReadsPerGene                                                                                      ENCODE3 GRCh38 V24    file.genome_annotation          GRCh38                V24   ENCFF824ZKD    VTRNA1-1         ENSG00000199990.1   ENSG00000199990.1 ENSG00000199990              129                      129                       0                                        0                                       0                             NaN
+small_RNA                         STAR_ReadsPerGene                                                                                      ENCODE3 GRCh38 V24    file.genome_annotation          GRCh38                V24   ENCFF824ZKD    VTRNA1-2         ENSG00000202111.1   ENSG00000202111.1 ENSG00000202111              129                      129                       0                                        0                                       0                             NaN
+small_RNA                         STAR_ReadsPerGene                                                                                      ENCODE3 GRCh38 V24    file.genome_annotation          GRCh38                V24   ENCFF824ZKD    VTRNA1-3         ENSG00000202515.1   ENSG00000202515.1 ENSG00000202515              129                      129                       0                                        0                                       0                             NaN
+total_RNA                        RSEM_genes_results ENCODE4 v1.2.3 GRCh38 V29;ENCODE4 v1.2.1 GRCh38 V29;ENCODE4 v1.2.4 GRCh38 V29;ENCODE4 v1.1.0 GRCh38 V29    file.genome_annotation          GRCh38                V29   ENCFF159KBI    VTRNA1-1         ENSG00000199990.1   ENSG00000199990.1 ENSG00000199990              508                      508                       0                                        0                                     506                             NaN
+total_RNA                        RSEM_genes_results ENCODE4 v1.2.3 GRCh38 V29;ENCODE4 v1.2.1 GRCh38 V29;ENCODE4 v1.2.4 GRCh38 V29;ENCODE4 v1.1.0 GRCh38 V29    file.genome_annotation          GRCh38                V29   ENCFF159KBI    VTRNA1-2         ENSG00000202111.1   ENSG00000202111.1 ENSG00000202111              508                      508                       0                                        0                                     508                             NaN
+total_RNA                        RSEM_genes_results ENCODE4 v1.2.3 GRCh38 V29;ENCODE4 v1.2.1 GRCh38 V29;ENCODE4 v1.2.4 GRCh38 V29;ENCODE4 v1.1.0 GRCh38 V29    file.genome_annotation          GRCh38                V29   ENCFF159KBI    VTRNA1-3         ENSG00000202515.1   ENSG00000202515.1 ENSG00000202515              508                      508                       0                                        0                                     508                             NaN
+total_RNA                         STAR_ReadsPerGene                                                                                       Lab custom GRCh38    file.submitter_comment          GRCh38                V43                  VTRNA1-1                             ENSG00000199990.1 ENSG00000199990              299                      299                       0                                        0                                       0                             NaN
+total_RNA                         STAR_ReadsPerGene                                                                                       Lab custom GRCh38    file.submitter_comment          GRCh38                V43                  VTRNA1-2                             ENSG00000202111.1 ENSG00000202111              299                      299                       0                                        0                                       0                             NaN
+total_RNA                         STAR_ReadsPerGene                                                                                       Lab custom GRCh38    file.submitter_comment          GRCh38                V43                  VTRNA1-3                             ENSG00000202515.1 ENSG00000202515              299                      299                       0                                        0                                       0                             NaN
+small_RNA not parsed (alternate files not selected)                                                                                        ENCODE3 hg19 V19    file.genome_annotation            hg19                V19   ENCFF271PVT    VTRNA1-1         ENSG00000199990.1                     ENSG00000199990                0                        0                       0                                        0                                       0                           129.0
+small_RNA not parsed (alternate files not selected)                                                                                        ENCODE3 hg19 V19    file.genome_annotation            hg19                V19   ENCFF271PVT    VTRNA1-2         ENSG00000202111.1                     ENSG00000202111                0                        0                       0                                        0                                       0                           129.0
+small_RNA not parsed (alternate files not selected)                                                                                        ENCODE3 hg19 V19    file.genome_annotation            hg19                V19   ENCFF271PVT    VTRNA1-3         ENSG00000202515.1                     ENSG00000202515                0                        0                       0                                        0                                       0                           129.0
+total_RNA not parsed (alternate files not selected)                                                                                      ENCODE3 GRCh38 V24    file.genome_annotation          GRCh38                V24   ENCFF824ZKD    VTRNA1-1         ENSG00000199990.1                     ENSG00000199990                0                        0                       0                                        0                                       0                           264.0
+total_RNA not parsed (alternate files not selected)                                                                                      ENCODE3 GRCh38 V24    file.genome_annotation          GRCh38                V24   ENCFF824ZKD    VTRNA1-2         ENSG00000202111.1                     ENSG00000202111                0                        0                       0                                        0                                       0                           264.0
+total_RNA not parsed (alternate files not selected)                                                                                      ENCODE3 GRCh38 V24    file.genome_annotation          GRCh38                V24   ENCFF824ZKD    VTRNA1-3         ENSG00000202515.1                     ENSG00000202515                0                        0                       0                                        0                                       0                           264.0
+total_RNA not parsed (alternate files not selected)                                                                                     Lab custom hg19 V10    file.genome_annotation            hg19                V10                  VTRNA1-1                                                                              0                        0                       0                                        0                                       0                            11.0
+total_RNA not parsed (alternate files not selected)                                                                                     Lab custom hg19 V10    file.genome_annotation            hg19                V10                  VTRNA1-2                                                                              0                        0                       0                                        0                                       0                            11.0
+total_RNA not parsed (alternate files not selected)                                                                                     Lab custom hg19 V10    file.genome_annotation            hg19                V10                  VTRNA1-3                                                                              0                        0                       0                                        0                                       0                            11.0
+total_RNA not parsed (alternate files not selected)                                                                                        ENCODE3 hg19 V19    file.genome_annotation            hg19                V19   ENCFF271PVT    VTRNA1-1         ENSG00000199990.1                     ENSG00000199990                0                        0                       0                                        0                                       0                           262.0
+total_RNA not parsed (alternate files not selected)                                                                                        ENCODE3 hg19 V19    file.genome_annotation            hg19                V19   ENCFF271PVT    VTRNA1-2         ENSG00000202111.1                     ENSG00000202111                0                        0                       0                                        0                                       0                           262.0
+total_RNA not parsed (alternate files not selected)                                                                                        ENCODE3 hg19 V19    file.genome_annotation            hg19                V19   ENCFF271PVT    VTRNA1-3         ENSG00000202515.1                     ENSG00000202515                0                        0                       0                                        0                                       0                           262.0
+total_RNA not parsed (alternate files not selected)                                                                                         Lab custom hg19    file.genome_annotation            hg19                NaN                  VTRNA1-1                                                                              0                        0                       0                                        0                                       0                            23.0
+total_RNA not parsed (alternate files not selected)                                                                                         Lab custom hg19    file.genome_annotation            hg19                NaN                  VTRNA1-2                                                                              0                        0                       0                                        0                                       0                            23.0
+total_RNA not parsed (alternate files not selected)                                                                                         Lab custom hg19    file.genome_annotation            hg19                NaN                  VTRNA1-3                                                                              0                        0                       0                                        0                                       0                            23.0
+
+==============================================================================
+SUMMARY A: total RNA-seq, ENCODE uniform pipeline (STAR+RSEM) - TPM
+==============================================================================
+      quant_schema gene_symbol metric  n_samples  n_measured  n_quantifiable  n_TPM_gt_0  median_TPM  mean_TPM  max_TPM  median_TPM_quantifiable_only biosample_with_max file_with_max
+RSEM_genes_results    VTRNA1-1    TPM        508         508               2           0         0.0       0.0      0.0                           0.0                                 
+RSEM_genes_results    VTRNA1-2    TPM        508         508               0           0         0.0       0.0      0.0                           NaN                                 
+RSEM_genes_results    VTRNA1-3    TPM        508         508               0           0         0.0       0.0      0.0                           NaN                                 
+
+Tissue / cell-type summary (median TPM):
+biosample_type                                                          biosample_term_name  N_biological_samples  median_TPM_VTRNA1_1  median_TPM_VTRNA1_2  median_TPM_VTRNA1_3
+  primary cell                                                                       B cell                     3                  0.0                  0.0                  0.0
+  primary cell                                                       CD14-positive monocyte                     1                  0.0                  0.0                  0.0
+  primary cell                    CD4-positive, CD25-positive, alpha-beta regulatory T cell                     1                  0.0                  0.0                  0.0
+  primary cell                                              CD4-positive, alpha-beta T cell                     2                  0.0                  0.0                  0.0
+  primary cell                                       CD4-positive, alpha-beta memory T cell                     2                  0.0                  0.0                  0.0
+  primary cell                                              CD8-positive, alpha-beta T cell                     2                  0.0                  0.0                  0.0
+  primary cell                                       CD8-positive, alpha-beta memory T cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                                       T-cell                     6                  0.0                  0.0                  0.0
+  primary cell                                                             T-helper 17 cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                       airway epithelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                    aortic smooth muscle cell                     2                  0.0                  0.0                  0.0
+  primary cell                                          articular chondrocyte of knee joint                     2                  0.0                  0.0                  0.0
+  primary cell                                                                    astrocyte                     2                  0.0                  0.0                  0.0
+  primary cell                                       bladder microvascular endothelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                    bronchial epithelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                 bronchial smooth muscle cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                  bronchus fibroblast of lung                     2                  0.0                  0.0                  0.0
+  primary cell                                                    cardiac atrium fibroblast                     2                  0.0                  0.0                  0.0
+  primary cell                                                 cardiac ventricle fibroblast                     2                  0.0                  0.0                  0.0
+  primary cell                                         dermis blood vessel endothelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                     dermis lymphatic vessel endothelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                       dermis microvascular lymphatic vessel endothelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                  endometrial microvascular endothelial cells                     2                  0.0                  0.0                  0.0
+  primary cell                                          endothelial cell of coronary artery                     2                  0.0                  0.0                  0.0
+  primary cell                                           endothelial cell of umbilical vein                     2                  0.0                  0.0                  0.0
+  primary cell                                          epithelial cell of alveolus of lung                     2                  0.0                  0.0                  0.0
+  primary cell                                           epithelial cell of proximal tubule                     2                  0.0                  0.0                  0.0
+  primary cell                                          epithelial cell of umbilical artery                     2                  0.0                  0.0                  0.0
+  primary cell                                                         fibroblast of dermis                     2                  0.0                  0.0                  0.0
+  primary cell                                                           fibroblast of lung                     2                  0.0                  0.0                  0.0
+  primary cell                                          fibroblast of the aortic adventitia                     2                  0.0                  0.0                  0.0
+  primary cell                                             fibroblast of villous mesenchyme                     2                  0.0                  0.0                  0.0
+  primary cell                                                        foreskin keratinocyte                     2                  0.0                  0.0                  0.0
+  primary cell                                                  glomerular endothelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                            hair follicle dermal papilla cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                 hair follicular keratinocyte                     2                  0.0                  0.0                  0.0
+  primary cell                                                       kidney epithelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                          lung microvascular endothelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                      mammary epithelial cell                     3                  0.0                  0.0                  0.0
+  primary cell                                       mammary microvascular endothelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                           melanocyte of skin                     4                  0.0                  0.0                  0.0
+  primary cell                                                               mesangial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                     mesenchymal stem cell of Wharton's jelly                     2                  0.0                  0.0                  0.0
+  primary cell                                             mesenchymal stem cell of adipose                     2                  0.0                  0.0                  0.0
+  primary cell                                     mesenchymal stem cell of the bone marrow                     2                  0.0                  0.0                  0.0
+  primary cell                                                             mononuclear cell                     1                  0.0                  0.0                  0.0
+  primary cell                                                              myometrial cell                     2                  0.0                  0.0                  0.0
+  primary cell                         naive thymus-derived CD4-positive, alpha-beta T cell                     6                  0.0                  0.0                  0.0
+  primary cell                         naive thymus-derived CD8-positive, alpha-beta T cell                     2                  0.0                  0.0                  0.0
+  primary cell nasal cavity respiratory epithelium epithelial cell of viscerocranial mucosa                     2                  0.0                  0.0                  0.0
+  primary cell                                                          natural killer cell                     4                  0.0                  0.0                  0.0
+  primary cell                                                                   osteoblast                     2                  0.0                  0.0                  0.0
+  primary cell                                                       pericardium fibroblast                     2                  0.0                  0.0                  0.0
+  primary cell                                                    placental epithelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                           placental pericyte                     2                  0.0                  0.0                  0.0
+  primary cell                                            pulmonary artery endothelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                      regular cardiac myocyte                     2                  0.0                  0.0                  0.0
+  primary cell                                               renal cortical epithelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                     skeletal muscle myoblast                     2                  0.0                  0.0                  0.0
+  primary cell                                               skeletal muscle satellite cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                smooth muscle cell of bladder                     2                  0.0                  0.0                  0.0
+  primary cell                                    smooth muscle cell of the coronary artery                     2                  0.0                  0.0                  0.0
+  primary cell                                   smooth muscle cell of the pulmonary artery                     2                  0.0                  0.0                  0.0
+  primary cell                                   smooth muscle cell of the umbilical artery                     2                  0.0                  0.0                  0.0
+  primary cell                                                smooth muscle cell of trachea                     2                  0.0                  0.0                  0.0
+  primary cell                                                    subcutaneous preadipocyte                     2                  0.0                  0.0                  0.0
+  primary cell                                              thoracic aorta endothelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                     tracheal epithelial cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                   uterine smooth muscle cell                     2                  0.0                  0.0                  0.0
+  primary cell                                                        vein endothelial cell                     2                  0.0                  0.0                  0.0
+        tissue                                                                Peyer's patch                     4                  0.0                  0.0                  0.0
+        tissue                                          Right ventricle myocardium inferior                     1                  0.0                  0.0                  0.0
+        tissue                                          Right ventricle myocardium superior                     1                  0.0                  0.0                  0.0
+        tissue                                                                adrenal gland                     9                  0.0                  0.0                  0.0
+        tissue                                                                        aorta                     2                  0.0                  0.0                  0.0
+        tissue                                                              ascending aorta                     1                  0.0                  0.0                  0.0
+        tissue                                                             body of pancreas                     2                  0.0                  0.0                  0.0
+        tissue                                                            breast epithelium                     3                  0.0                  0.0                  0.0
+        tissue                                                              camera-type eye                     2                  0.0                  0.0                  0.0
+        tissue                                                               cardiac septum                     1                  0.0                  0.0                  0.0
+        tissue                                                                   cerebellum                     2                  0.0                  0.0                  0.0
+        tissue                                                               colonic mucosa                     2                  0.0                  0.0                  0.0
+        tissue                                                                 diencephalon                     2                  0.0                  0.0                  0.0
+        tissue                                               dorsolateral prefrontal cortex                   121                  0.0                  0.0                  0.0
+        tissue                                                             esophagus mucosa                     1                  0.0                  0.0                  0.0
+        tissue                                                  esophagus muscularis mucosa                     4                  0.0                  0.0                  0.0
+        tissue                                                esophagus squamous epithelium                     4                  0.0                  0.0                  0.0
+        tissue                                                               frontal cortex                     2                  0.0                  0.0                  0.0
+        tissue                                                       gastrocnemius medialis                     4                  0.0                  0.0                  0.0
+        tissue                                                   gastroesophageal sphincter                     4                  0.0                  0.0                  0.0
+        tissue                                                                        heart                     3                  0.0                  0.0                  0.0
+        tissue                                                         heart left ventricle                     9                  0.0                  0.0                  0.0
+        tissue                                                        heart right ventricle                    10                  0.0                  0.0                  0.0
+        tissue                                                                       kidney                     1                  0.0                  0.0                  0.0
+        tissue                                                          left cardiac atrium                     2                  0.0                  0.0                  0.0
+        tissue                                                                   left colon                     2                  0.0                  0.0                  0.0
+        tissue                                                           left lobe of liver                     1                  0.0                  0.0                  0.0
+        tissue                                                                    left lung                     2                  0.0                  0.0                  0.0
+        tissue                                           left ventricle myocardium inferior                     1                  0.0                  0.0                  0.0
+        tissue                                           left ventricle myocardium superior                     1                  0.0                  0.0                  0.0
+        tissue                                                                        liver                     4                  0.0                  0.0                  0.0
+        tissue                                                               lower leg skin                     4                  0.0                  0.0                  0.0
+        tissue                                                      lower lobe of left lung                     3                  0.0                  0.0                  0.0
+        tissue                                                     lower lobe of right lung                     1                  0.0                  0.0                  0.0
+        tissue                                                                         lung                     3                  0.0                  0.0                  0.0
+        tissue                                                           mesenteric fat pad                     1                  0.0                  0.0                  0.0
+        tissue                                                                  metanephros                     2                  0.0                  0.0                  0.0
+        tissue                                                   mucosa of descending colon                     3                  0.0                  0.0                  0.0
+        tissue                                                        mucosa of gallbladder                     1                  0.0                  0.0                  0.0
+        tissue                                                                muscle of leg                     1                  0.0                  0.0                  0.0
+        tissue                                                              muscle of trunk                     1                  0.0                  0.0                  0.0
+        tissue                                                               occipital lobe                     2                  0.0                  0.0                  0.0
+        tissue                                                              omental fat pad                     4                  0.0                  0.0                  0.0
+        tissue                                                                        ovary                     7                  0.0                  0.0                  0.0
+        tissue                                                                     pancreas                     6                  0.0                  0.0                  0.0
+        tissue                                                                parietal lobe                     2                  0.0                  0.0                  0.0
+        tissue                                                                     placenta                    13                  0.0                  0.0                  0.0
+        tissue                                                          posterior vena cava                     2                  0.0                  0.0                  0.0
+        tissue                                                               prostate gland                     2                  0.0                  0.0                  0.0
+        tissue                                                                 psoas muscle                     4                  0.0                  0.0                  0.0
+        tissue                                                right atrium auricular region                     2                  0.0                  0.0                  0.0
+        tissue                                                         right cardiac atrium                     4                  0.0                  0.0                  0.0
+        tissue                                                          right lobe of liver                     6                  0.0                  0.0                  0.0
+        tissue                                                                sciatic nerve                     1                  0.0                  0.0                  0.0
+        tissue                                                                sigmoid colon                     4                  0.0                  0.0                  0.0
+        tissue                                                       skeletal muscle tissue                     2                  0.0                  0.0                  0.0
+        tissue                                                                 skin of body                     2                  0.0                  0.0                  0.0
+        tissue                                                                  spinal cord                     3                  0.0                  0.0                  0.0
+        tissue                                                                       spleen                     8                  0.0                  0.0                  0.0
+        tissue                                                                      stomach                     6                  0.0                  0.0                  0.0
+        tissue                                                  subcutaneous adipose tissue                     4                  0.0                  0.0                  0.0
+        tissue                                                              suprapubic skin                     4                  0.0                  0.0                  0.0
+        tissue                                                                temporal lobe                     2                  0.0                  0.0                  0.0
+        tissue                                                                       testis                     2                  0.0                  0.0                  0.0
+        tissue                                                               thoracic aorta                     2                  0.0                  0.0                  0.0
+        tissue                                                                       thymus                     1                  0.0                  0.0                  0.0
+        tissue                                                                thyroid gland                     6                  0.0                  0.0                  0.0
+        tissue                                                                 tibial nerve                     4                  0.0                  0.0                  0.0
+        tissue                                                                       tongue                     2                  0.0                  0.0                  0.0
+        tissue                                                             transverse colon                     4                  0.0                  0.0                  0.0
+        tissue                                                               umbilical cord                     2                  0.0                  0.0                  0.0
+        tissue                                                      upper lobe of left lung                     6                  0.0                  0.0                  0.0
+        tissue                                                     upper lobe of right lung                     1                  0.0                  0.0                  0.0
+        tissue                                                                       ureter                     1                  0.0                  0.0                  0.0
+        tissue                                                              urinary bladder                     2                  0.0                  0.0                  0.0
+        tissue                                                                       uterus                     5                  0.0                  0.0                  0.0
+        tissue                                                                       vagina                     1                  0.0                  0.0                  0.0
+
+==============================================================================
+SUMMARY B: total RNA-seq, UW/Altius lab pipeline (STAR raw counts, GENCODE V43) - CPM (derived)
+==============================================================================
+     quant_schema gene_symbol metric  n_samples  n_measured  n_quantifiable  n_CPM_gt_0  median_CPM  mean_CPM   max_CPM  median_CPM_quantifiable_only     biosample_with_max file_with_max
+STAR_ReadsPerGene    VTRNA1-1    CPM        299         299             299         287    0.391025  0.646018  5.089315                      0.391025 CD14-positive monocyte   ENCFF564DQW
+STAR_ReadsPerGene    VTRNA1-2    CPM        299         299             299          30    0.000000  0.006881  0.271675                      0.000000 CD14-positive monocyte   ENCFF703TMD
+STAR_ReadsPerGene    VTRNA1-3    CPM        299         299             299         294    1.266103  1.672783 11.736372                      1.266103 CD14-positive monocyte   ENCFF703TMD
+
+Tissue / cell-type summary (median CPM):
+biosample_type                                       biosample_term_name  N_biological_samples  median_CPM_VTRNA1_1  median_CPM_VTRNA1_2  median_CPM_VTRNA1_3
+  primary cell                                    CD14-positive monocyte                    11             2.377790             0.000000             2.036321
+  primary cell CD4-positive, CD25-positive, alpha-beta regulatory T cell                     1             0.281923             0.000000             1.409615
+  primary cell                           CD4-positive, alpha-beta T cell                   173             0.317993             0.000000             0.858922
+  primary cell                           CD8-positive, alpha-beta T cell                    44             0.534552             0.000000             1.531352
+  primary cell                                  T follicular helper cell                     2             0.546024             0.000000             2.174870
+  primary cell                                                    T-cell                    29             0.490727             0.000000             1.129787
+  primary cell                                           T-helper 1 cell                     5             0.145162             0.000000             2.177425
+  primary cell                                          T-helper 17 cell                     2             0.928103             0.000000             2.469986
+  primary cell                                           T-helper 2 cell                     2             0.910209             0.032073             3.776863
+  primary cell                                           T-helper 9 cell                     2             0.674670             0.000000             0.788902
+  primary cell            central memory CD4-positive, alpha-beta T cell                     3             0.473052             0.000000             3.277574
+  primary cell                  effector CD4-positive, alpha-beta T cell                     1             0.711149             0.000000             1.600084
+  primary cell                  effector CD8-positive, alpha-beta T cell                     4             0.669157             0.000000             0.850517
+  primary cell           effector memory CD4-positive, alpha-beta T cell                     3             0.366687             0.000000             1.406029
+  primary cell           effector memory CD8-positive, alpha-beta T cell                     9             0.587969             0.000000             1.389745
+  primary cell      naive thymus-derived CD4-positive, alpha-beta T cell                     1             0.000000             0.000000             0.000000
+  primary cell      naive thymus-derived CD8-positive, alpha-beta T cell                     7             0.279073             0.000000             0.605561
+
+==============================================================================
+SUMMARY C: small RNA-seq (<200 nt), ENCODE small-RNA pipeline (STAR counts) - CPM (derived)
+==============================================================================
+     quant_schema gene_symbol metric  n_samples  n_measured  n_quantifiable  n_CPM_gt_0  median_CPM  mean_CPM    max_CPM  median_CPM_quantifiable_only  biosample_with_max file_with_max
+STAR_ReadsPerGene    VTRNA1-1    CPM        129         129             129         129   35.769422 50.705354 231.416088                     35.769422 right lobe of liver   ENCFF326PAJ
+STAR_ReadsPerGene    VTRNA1-2    CPM        129         129             129         114    1.878711 16.405987 144.591162                      1.878711  placental pericyte   ENCFF592BWV
+STAR_ReadsPerGene    VTRNA1-3    CPM        129         129             129         108    0.428482  1.673192  54.588115                      0.428482  placental pericyte   ENCFF592BWV
+
+Tissue / cell-type summary (median CPM):
+biosample_type                      biosample_term_name  N_biological_samples  median_CPM_VTRNA1_1  median_CPM_VTRNA1_2  median_CPM_VTRNA1_3
+  primary cell                                   B cell                     2            58.166103             1.029921             0.632986
+  primary cell                   CD14-positive monocyte                     2           144.967135             0.251202             1.414089
+  primary cell      articular chondrocyte of knee joint                     2            62.694252            17.506897             1.155389
+  primary cell       endothelial cell of umbilical vein                     2             3.752712             5.779982             0.518331
+  primary cell                     fibroblast of dermis                     2            79.315672            16.352525             2.047771
+  primary cell      fibroblast of the aortic adventitia                     2            41.678359            20.988045             2.617636
+  primary cell         fibroblast of villous mesenchyme                     2            31.111683            54.132560             3.391111
+  primary cell        hair follicle dermal papilla cell                     2            79.282180            83.668526             2.453219
+  primary cell                             keratinocyte                     6            16.084527            25.475005             1.288754
+  primary cell                  mammary epithelial cell                     1            17.202913             0.789930             2.282019
+  primary cell                       melanocyte of skin                     4           110.066408            40.654551             8.097979
+  primary cell mesenchymal stem cell of Wharton's jelly                     2            31.773108            41.727137             2.307823
+  primary cell         mesenchymal stem cell of adipose                     2           114.350608            57.074993             5.528402
+  primary cell mesenchymal stem cell of the bone marrow                     2            37.146905            22.681437             2.677612
+  primary cell                               osteoblast                     2            47.252301            21.766685             2.048873
+  primary cell                placental epithelial cell                     2             9.519521            24.271902             1.425671
+  primary cell                       placental pericyte                     2           123.811568            81.422938            28.715975
+  primary cell           skeletal muscle satellite cell                     2            39.010874            30.777779             4.061479
+  primary cell                subcutaneous preadipocyte                     2            26.777751            19.357949             2.910227
+  primary cell          thoracic aorta endothelial cell                     2            34.468368            75.834580             4.111605
+  primary cell                    vein endothelial cell                     2            28.823207            15.076272             2.319341
+        tissue                            Peyer's patch                     2            64.758371            22.147811             0.103465
+        tissue                            adrenal gland                     2           106.124969            74.379392             4.128379
+        tissue                         body of pancreas                     2            19.129463             6.520034             0.000000
+        tissue                               cerebellum                     2             7.752007             0.000000             0.155462
+        tissue                             diencephalon                     2             3.511307             0.000000             0.159561
+        tissue              esophagus muscularis mucosa                     3            36.037711             0.082239             0.082239
+        tissue            esophagus squamous epithelium                     4            55.672424            14.448325             1.231470
+        tissue                           frontal cortex                     2             1.142969             0.012160             0.012160
+        tissue               gastroesophageal sphincter                     4            88.615734             0.165110             0.432157
+        tissue                                    heart                     2             6.402176             0.635844             0.054928
+        tissue                                    liver                     1            15.456732             0.759130             0.358478
+        tissue                                     lung                     2            33.439043             0.356120             0.025261
+        tissue                              metanephros                     2             3.718379             0.035983             0.056207
+        tissue                           occipital lobe                     2             1.216197             0.000000             0.014059
+        tissue                          omental fat pad                     1            97.572055             6.956526             1.445512
+        tissue                                    ovary                     1            14.661918             0.373552             0.000000
+        tissue                            parietal lobe                     2             2.762691             0.014828             0.000000
+        tissue                           prostate gland                     2            38.551894             1.420331             0.407602
+        tissue                      right lobe of liver                     2           209.103062             2.007819             2.693590
+        tissue                            sigmoid colon                     4            33.685640             0.021115             0.084458
+        tissue                   skeletal muscle tissue                     2             3.321947             0.122968             0.030742
+        tissue                             skin of body                     2             6.076749             0.086626             0.000000
+        tissue                              spinal cord                     2            10.846204             0.018700             0.582084
+        tissue                                   spleen                     4           139.413954             1.125577             0.136130
+        tissue                                  stomach                     4            43.044492             6.391972             0.373804
+        tissue              subcutaneous adipose tissue                     1           132.362954             6.259728             0.605780
+        tissue                            temporal lobe                     2             3.416946             0.014984             0.027792
+        tissue                                   testis                     2            12.646981             4.142714             0.000000
+        tissue                            thyroid gland                     3            38.742835             0.137875             0.140940
+        tissue                             tibial nerve                     1            35.866127             1.159850             0.178438
+        tissue                                   tongue                     2            13.046731             0.154687             0.057279
+        tissue                         transverse colon                     4           106.579735            61.644452             0.265926
+        tissue                  upper lobe of left lung                     4            77.383288             1.424146             0.193192
+        tissue                          urinary bladder                     1             7.001186             1.115004             0.077791
+        tissue                                   uterus                     3             5.427256             0.220344             0.118835
+        tissue                                   vagina                     1            18.695492             0.325705             0.000000
