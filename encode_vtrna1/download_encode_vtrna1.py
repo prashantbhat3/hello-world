@@ -75,6 +75,11 @@ ASSAY_TITLES_CONSIDERED = [
 
 ELIGIBLE_CLASSIFICATIONS = {"primary cell", "tissue"}
 
+# Experimentally manipulated primary cells/tissues (in vitro treatment, activation /
+# stimulation / polarization, genetic modification, ENCODE "perturbed" flag) are INCLUDED
+# by default and labelled via manipulation_status; --exclude-manipulated drops them.
+INCLUDE_MANIPULATED = True
+
 ASSAY_EXCLUSION_REASON = {
     "polyA plus RNA-seq": "poly(A)+ selected library; vault RNAs are non-polyadenylated Pol III transcripts",
     "polyA minus RNA-seq": "poly(A)-depleted fraction only (not total RNA)",
@@ -439,6 +444,8 @@ def classify_experiment(exp: dict, ctx: dict) -> dict:
     """Decide track membership and eligibility for one experiment."""
     reasons: list[str] = []
     flags: list[str] = []
+    manip: list[str] = []          # evidence of experimental manipulation
+    possible_manip: list[str] = []
     assay_title = exp.get("assay_title")
     bt = ctx["biosample_types"].get(exp.get("biosample_ontology"), {})
     classification = bt.get("classification", "")
@@ -456,7 +463,7 @@ def classify_experiment(exp: dict, ctx: dict) -> dict:
         reasons.append(f"biosample classification '{classification}' is not primary cell/tissue")
 
     if exp.get("perturbed"):
-        reasons.append("experiment flagged perturbed=true by ENCODE")
+        manip.append("experiment flagged perturbed=true by ENCODE")
 
     reps = ctx["reps_by_exp"].get(exp["@id"], [])
     if not reps:
@@ -488,19 +495,19 @@ def classify_experiment(exp: dict, ctx: dict) -> dict:
         if IMMORTAL_PATTERN.search(text):
             reasons.append(f"biosample {bs['accession']} described as immortalized/transformed/organoid/xenograft/iPSC")
         if IN_VITRO_STATE_PATTERN.search(bst.get("term_name", "")):
-            reasons.append(f"biosample term '{bst.get('term_name')}' denotes an in vitro activated/stimulated/polarized state "
-                           "(no untreated baseline; excluded as experimentally manipulated even where ENCODE lists no treatment)")
+            manip.append(f"biosample term '{bst.get('term_name')}' denotes an in vitro activated/stimulated/polarized state"
+                         + ("" if bs.get("treatments") else " (ENCODE lists no treatment)"))
         elif POSSIBLE_POLARIZED_PATTERN.search(bst.get("term_name", "")):
-            flags.append(f"biosample term '{bst.get('term_name')}' may reflect ex vivo sorting or in vitro polarization; ENCODE records no treatment")
+            possible_manip.append(f"biosample term '{bst.get('term_name')}' may reflect ex vivo sorting or in vitro polarization; ENCODE records no treatment")
         if bs.get("host"):
             reasons.append(f"biosample {bs['accession']} has a host organism (xenograft)")
         if bs.get("treatments"):
             tnames = [ctx["treatments"].get(t, {}).get("treatment_term_name", acc_from_id(t)) for t in bs["treatments"]]
-            reasons.append(f"biosample {bs['accession']} treated in vitro ({join(tnames, ', ')})")
+            manip.append(f"biosample {bs['accession']} treated in vitro ({join(tnames, ', ')})")
         if bs.get("genetic_modifications") or bs.get("applied_modifications"):
-            reasons.append(f"biosample {bs['accession']} genetically modified")
+            manip.append(f"biosample {bs['accession']} genetically modified")
         if bs.get("perturbed"):
-            reasons.append(f"biosample {bs['accession']} flagged perturbed")
+            manip.append(f"biosample {bs['accession']} flagged perturbed")
         if dis:
             flags.append(f"donor/biosample disease: {dis}")
     for lib in libraries:
@@ -518,14 +525,22 @@ def classify_experiment(exp: dict, ctx: dict) -> dict:
         if track == "total_RNA" and hi is not None and lo is None and hi <= 200:
             flags.append(f"library {lib['accession']} size_range {lib.get('size_range')} looks like a small-RNA fraction")
 
-    # deduplicate reasons
-    seen, uniq = set(), []
-    for r in reasons:
-        if r not in seen:
-            uniq.append(r)
-            seen.add(r)
+    def dedup(xs):
+        seen, out = set(), []
+        for x in xs:
+            if x not in seen:
+                out.append(x)
+                seen.add(x)
+        return out
+
+    manip, possible_manip = dedup(manip), dedup(possible_manip)
+    status = "manipulated" if manip else ("possibly_manipulated" if possible_manip else "baseline")
+    if manip and not INCLUDE_MANIPULATED:
+        reasons += [m + " [excluded: --exclude-manipulated]" for m in manip]
+    uniq = dedup(reasons)
     return {"track": track, "eligible": track != "none" and not uniq,
-            "reasons": uniq, "flags": sorted(set(flags))}
+            "reasons": uniq, "flags": sorted(set(flags)),
+            "manipulation_status": status, "manipulation_details": "; ".join(manip + possible_manip)}
 
 
 # ---------------------------------------------------------------------------
@@ -916,7 +931,12 @@ def main(argv=None):
     ap.add_argument("--refresh", action="store_true", help="re-query the ENCODE API instead of using cached responses")
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--limit", type=int, default=0, help="debug: process only the first N eligible experiments")
+    ap.add_argument("--exclude-manipulated", action="store_true",
+                    help="exclude in vitro treated/activated/stimulated/polarized, genetically modified or "
+                         "ENCODE-perturbed primary cells/tissues (default: include and label them)")
     args = ap.parse_args(argv)
+    global INCLUDE_MANIPULATED
+    INCLUDE_MANIPULATED = not args.exclude_manipulated
 
     paths = Paths(args.outdir)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s",
@@ -965,6 +985,7 @@ def main(argv=None):
             "perturbed": e.get("perturbed"), "experiment_status": e.get("status"),
             "default_analysis": acc_from_id(e.get("default_analysis")),
             "experiment_flags": "; ".join(c["flags"]),
+            "manipulation_status": c["manipulation_status"], "manipulation_details": c["manipulation_details"],
         }
         audit_txt, worst, n_err, n_nc, n_warn = summarize_audit(e.get("audit"))
         base.update({"experiment_audit_worst": worst, "experiment_audit": audit_txt})
@@ -1122,6 +1143,8 @@ def main(argv=None):
             "experiment_audit_n_not_compliant": n_nc, "experiment_audit_n_warning": n_warn,
             "experiment_audit": audit_txt,
             "experiment_flags": "; ".join(classified[e["@id"]]["flags"]),
+            "manipulation_status": classified[e["@id"]]["manipulation_status"],
+            "manipulation_details": classified[e["@id"]]["manipulation_details"],
             "biosample_summary": meta["biosample_summary"], "preservation_method": meta["preservation_method"],
             "quant_schema": res.get("schema"), "download_ok": res.get("download_ok"),
             "parsed_ok": res.get("parsed", False), "parse_error": res.get("parse_error"),
@@ -1182,6 +1205,8 @@ def main(argv=None):
             lrow = {"track": track, "quant_schema": res.get("schema"), "biosample": row["biosample_term_name"], "biosample_type": row["biosample_type"],
                     "organ": row["organ"], "cell_type": row["cell_type"],
                     "donor_accession": row["donor_accession"],
+                    "manipulation_status": row["manipulation_status"],
+                    "manipulation_details": row["manipulation_details"],
                     "experiment_accession": row["experiment_accession"], "biological_replicate": br,
                     "file_accession": f["accession"], "gene_symbol": sym, **rec,
                     "genome_assembly": row["genome_assembly"], "annotation_version": row["annotation_version"],
@@ -1200,7 +1225,8 @@ def main(argv=None):
     def order_wide(df):
         first = ["biosample_term_name", "biosample_type", "organ", "cell_type", "anatomical_site",
                  "donor_accession", "donor_sex", "donor_age", "donor_age_units", "donor_life_stage",
-                 "donor_ethnicity", "experiment_accession", "biological_replicate", "technical_replicates",
+                 "donor_ethnicity", "manipulation_status", "manipulation_details",
+                 "experiment_accession", "biological_replicate", "technical_replicates",
                  "biosample_accession", "library_accession", "file_accession", "genome_assembly",
                  "annotation_version"]
         genes = []
@@ -1223,11 +1249,13 @@ def main(argv=None):
     sml.to_csv(os.path.join(paths.out, "encode_primary_human_vtrna1_smallRNA_expression.csv"), index=False)
 
     long_cols_total = ["biosample", "biosample_type", "organ", "cell_type", "donor_accession",
+                       "manipulation_status", "manipulation_details",
                        "experiment_accession", "biological_replicate", "file_accession", "gene_symbol",
                        "gene_id", "TPM", "expected_count", "FPKM", "length", "effective_length", "quantifiable",
                        "quant_schema", "count_sense", "CPM", "measurement_status", "na_reason", "gtf_gene_id", "gene_symbol_source",
                        "genome_assembly", "annotation_version", "library_rna_class", "vault_rna_suitability"]
     long_cols_small = ["biosample", "biosample_type", "organ", "cell_type", "donor_accession",
+                       "manipulation_status", "manipulation_details",
                        "experiment_accession", "biological_replicate", "file_accession", "gene_symbol",
                        "gene_id", "TPM", "expected_count", "FPKM", "quant_schema", "count_sense", "CPM", "count_unstranded",
                        "count_strand1", "count_strand2", "measurement_status", "na_reason", "gtf_gene_id",
@@ -1244,7 +1272,7 @@ def main(argv=None):
                 "file_accession", "biological_replicate", "technical_replicates", "file_status",
                 "genome_assembly", "annotation_version", "annotation_version_source", "analysis_accession",
                 "analysis_title", "default_analysis", "selection_note", "biosample_term_name", "biosample_type", "lab",
-                "perturbed", "experiment_status", "experiment_flags", "experiment_audit_worst", "experiment_audit"]
+                "perturbed", "manipulation_status", "manipulation_details", "experiment_status", "experiment_flags", "experiment_audit_worst", "experiment_audit"]
     manifest = manifest[[c for c in man_cols if c in manifest.columns]].sort_values(
         ["included", "track", "experiment_accession"], ascending=[False, True, True])
     manifest.to_csv(os.path.join(paths.out, "encode_vtrna1_source_manifest.csv"), index=False)
@@ -1316,6 +1344,20 @@ def main(argv=None):
 
 
 def gene_summary(df: pd.DataFrame, value: str, track: str) -> pd.DataFrame:
+    """Per-gene summary for all samples, baseline-only and manipulated-only subsets."""
+    parts = []
+    for subset, sub in [("all", df),
+                        ("baseline", df[df["manipulation_status"] == "baseline"]),
+                        ("possibly_manipulated", df[df["manipulation_status"] == "possibly_manipulated"]),
+                        ("manipulated", df[df["manipulation_status"] == "manipulated"])]:
+        if len(sub) or subset == "all":
+            g = _gene_summary(sub, value, track)
+            g.insert(0, "subset", subset)
+            parts.append(g)
+    return pd.concat(parts, ignore_index=True)
+
+
+def _gene_summary(df: pd.DataFrame, value: str, track: str) -> pd.DataFrame:
     rows = []
     for sym in TARGET_SYMBOLS:
         p = sym.replace("-", "_")
@@ -1349,8 +1391,10 @@ def biosample_summary(df: pd.DataFrame, value: str) -> pd.DataFrame:
         p = sym.replace("-", "_")
         agg[f"median_{value}_{p}"] = (f"{p}_{value}", lambda s: pd.to_numeric(s, errors="coerce").median())
         agg[f"n_{value}_gt0_{p}"] = (f"{p}_{value}", lambda s: int((pd.to_numeric(s, errors="coerce") > 0).sum()))
-    out = df.groupby(["biosample_type", "biosample_term_name"], dropna=False).agg(**agg).reset_index()
-    return out.sort_values(["biosample_type", "biosample_term_name"])
+    agg["manipulation_details"] = ("manipulation_details", lambda s: join(
+        re.sub(r"ENCBS\w+ ", "", x) for v in s.dropna() for x in str(v).split("; ") if x))
+    out = df.groupby(["biosample_type", "biosample_term_name", "manipulation_status"], dropna=False).agg(**agg).reset_index()
+    return out.sort_values(["biosample_type", "biosample_term_name", "manipulation_status"])
 
 
 def qc_and_summaries(paths, md, experiments, classified, manifest, tot, sml, results, failed, audit_df) -> list[str]:
@@ -1384,6 +1428,8 @@ def qc_and_summaries(paths, md, experiments, classified, manifest, tot, sml, res
         P("Assembly/annotation/schema: " + "; ".join(
             f"{a} {b} [{c}]: {n}" for (a, b, c), n in df.groupby(['genome_assembly', 'annotation_version', 'quant_schema'], dropna=False).size().items()))
         P("Biosample types: " + ", ".join(f"{k}={v}" for k, v in df['biosample_type'].value_counts().items()))
+        P("Manipulation status (rows): " + ", ".join(f"{k}={v}" for k, v in df['manipulation_status'].value_counts().items())
+          + "; experiments: " + ", ".join(f"{k}={v}" for k, v in df.groupby('manipulation_status')['experiment_accession'].nunique().items()))
         for sym in TARGET_SYMBOLS:
             p = sym.replace("-", "_")
             st = df[f"{p}_measurement_status"]
@@ -1462,7 +1508,7 @@ def qc_and_summaries(paths, md, experiments, classified, manifest, tot, sml, res
         P("")
         P(f"Tissue / cell-type summary (median {value}):")
         with pd.option_context("display.max_rows", 1000, "display.width", 300):
-            P(bsum[["biosample_type", "biosample_term_name", "N_biological_samples"]
+            P(bsum[["biosample_type", "biosample_term_name", "manipulation_status", "N_biological_samples"]
                    + [f"median_{value}_{s.replace('-', '_')}" for s in TARGET_SYMBOLS]].to_string(index=False))
 
     emit_block(tot[tot.quant_schema == "RSEM_genes_results"],

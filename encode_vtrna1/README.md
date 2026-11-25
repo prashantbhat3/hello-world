@@ -4,6 +4,13 @@ A census of **VTRNA1-1, VTRNA1-2 and VTRNA1-3** in every released ENCODE human p
 primary-tissue RNA-seq dataset that has a usable gene-level quantification. It is built only from
 ENCODE: no GTEx, cell lines, organoids, tumours or external data.
 
+**Experimentally manipulated primary cells and tissues are included** and labelled. These are
+samples treated or stimulated in vitro, activated or polarized, genetically modified, or flagged
+`perturbed` by ENCODE. Every row carries `manipulation_status` (`baseline` /
+`possibly_manipulated` / `manipulated`) and `manipulation_details`. To get the untreated set,
+filter on `manipulation_status == "baseline"`, or run with `--exclude-manipulated`, which drops
+them entirely and reproduces the earlier 725-experiment census.
+
 * **ENCODE queried:** 2026-11-25 (UTC), via the REST API at `https://www.encodeproject.org`.
   Each raw response is cached with its retrieval timestamp in `data/encode_metadata/api_cache/`,
   and every request is logged in `data/encode_metadata/query_log.tsv`.
@@ -16,15 +23,15 @@ ENCODE: no GTEx, cell lines, organoids, tumours or external data.
 
 | Track | Assay / pipeline | Bio. samples | VTRNA1-1 detected | VTRNA1-2 detected | VTRNA1-3 detected |
 |---|---|---|---|---|---|
-| **A** total RNA-seq, ENCODE uniform pipeline (STAR + **RSEM**, GENCODE V29) | Caltech, CSHL, UW, Stanford | 508 | TPM>0 in **0/508** | 0/508 | 0/508 |
-| **B** total RNA-seq, UW/Altius lab pipeline (**STAR unique-read counts**, GENCODE V43) | UW immune primary cells | 299 | count>0 in 287/299 (median CPM 0.39) | 30/299 (median 0) | 294/299 (median CPM 1.27) |
+| **A** total RNA-seq, ENCODE uniform pipeline (STAR + **RSEM**, GENCODE V29) | Caltech, CSHL, UW, Stanford | 559 (505 baseline, 3 possibly, 51 manipulated) | TPM>0 in **0/559** | 0/559 | 0/559 |
+| **B** total RNA-seq, UW/Altius lab pipeline (**STAR unique-read counts**, GENCODE V43) | UW immune primary cells | 375 (285 baseline, 14 possibly, 76 manipulated) | count>0 in 362/375 (median CPM 0.43) | 57/375 (median 0) | 368/375 (median CPM 1.00) |
 | **C** small RNA-seq (<200 nt), ENCODE small-RNA pipeline (STAR counts, V24) — *reported separately* | CSHL tissues & primary cells | 129 | 129/129 (median CPM **35.8**) | 114/129 (median 1.9) | 108/129 (median 0.43) |
 
 **The zeros in Track A are an artefact of the method, not evidence that the genes are silent.**
 In every ENCODE RSEM `genes.results` file, VTRNA1-1 is 99 nt long and VTRNA1-2/1-3 are 89 nt long.
 All three are shorter than the library's mean fragment length, so RSEM sets
 `effective_length = 0`. It then forces `expected_count`, `TPM` and `FPKM` to 0 whatever reads
-are present. This happens in 506/508 files for VTRNA1-1 and 508/508 for VTRNA1-2/1-3. The other
+are present. This happens in 557/559 files for VTRNA1-1 and 559/559 for VTRNA1-2/1-3. The other
 two files (placenta and thymus, with 120–200 nt inserts) have effective lengths of about 1 and
 still give 0. These rows are kept with their reported values. They are labelled
 `measurement_status = present_effective_length_0`, and `quantifiable = False` with an explicit
@@ -43,13 +50,13 @@ low but non-zero unique-read counts from total-RNA libraries.
 
 | File | Content |
 |---|---|
-| `encode_primary_human_vtrna1_expression.csv` | **Primary output.** One row per biological replicate (selected gene-quantification file) of total RNA-seq (Tracks A + B; see `quant_schema`). 807 rows, 132 columns. |
-| `encode_primary_human_vtrna1_expression_long.csv` | Long format of the above: sample × gene (2,421 rows). |
+| `encode_primary_human_vtrna1_expression.csv` | **Primary output.** One row per biological replicate (selected gene-quantification file) of total RNA-seq (Tracks A + B; see `quant_schema`). 934 rows, 134 columns, of which 790 are baseline, 17 possibly manipulated and 127 manipulated. |
+| `encode_primary_human_vtrna1_expression_long.csv` | Long format of the above: sample × gene (2,802 rows). |
 | `encode_primary_human_vtrna1_smallRNA_expression.csv` / `_long.csv` | Track C, kept separate as requested (129 rows / 387 rows). |
 | `encode_vtrna1_source_manifest.csv` | **Every experiment considered** (4,052), plus every gene-quant file seen for included experiments. `row_type` is `selected_file`, `alternate_file_not_selected`, `experiment_excluded` or `eligible_no_gene_quantification`, and each non-selected row has an `exclusion_reason`. |
 | `vtrna1_gene_identifier_audit.csv` | Per track × assembly × annotation × quantification schema: GTF gene ID, ID as reported in files, stable ID, files present/absent/unparsed, and files with effective length 0. Includes annotations seen only in non-selected files (hg19 V19, GRCh38 V24). |
-| `summary_vtrna1_by_gene_*.csv` | Per-gene n measured, n>0, median/mean/max, biosample and file with the maximum. Kept separate for RSEM TPM, UW STAR CPM and small-RNA CPM. |
-| `summary_vtrna1_by_biosample_*.csv` | Per biosample term: N biological samples, N experiments, N donors, median value and n>0 for each gene. |
+| `summary_vtrna1_by_gene_*.csv` | Per-gene n measured, n>0, median/mean/max, biosample and file with the maximum. Kept separate for RSEM TPM, UW STAR CPM and small-RNA CPM, and given for the subsets `all`, `baseline`, `possibly_manipulated` and `manipulated`. |
+| `summary_vtrna1_by_biosample_*.csv` | Per biosample term × `manipulation_status`: N biological samples, N experiments, N donors, median value and n>0 for each gene, plus the manipulations involved. |
 | `qc_report.txt` | Full QC log, also printed by the script. |
 | `data/extracted/vtrna1_rows_extracted_from_source_files.csv` | Every VTRNA1 row exactly as parsed from each source file (file accession → raw values). |
 | `data/extracted/vtrna1_gtf_records.csv` | VTRNA1 gene records from each ENCODE GENCODE GTF used. |
@@ -70,6 +77,7 @@ Key columns in the wide table:
   `library_depleted_in`, `library_treatments`, `library_documents`, `strandedness`, `read_length`,
   `run_type`, `sequencing_platform`, `analysis_title`, `pipeline_version` and `read_depth_qc` give
   technical context.
+* `manipulation_status` / `manipulation_details` record experimental manipulation (see Inclusion criteria).
 * `experiment_audit*` holds ENCODE audit levels and categories. `experiment_flags` holds disease
   status, possible in-vitro polarization and library-prep enzymes.
 * `n_rows_same_donor_and_biosample_term` counts rows sharing the same donor and biosample term
@@ -111,8 +119,21 @@ An experiment is included when **all** of the following hold:
    experiments go into the separate Track C.
 3. `biosample_ontology.classification` is `primary cell` or `tissue`. This is checked for the
    experiment **and for every replicate's biosample**.
-4. No biosample `treatments`, `genetic_modifications`/`applied_modifications`, or `perturbed`
-   flag, and the experiment is not `perturbed`.
+4. Experimental manipulation does **not** exclude a sample by default. It is recorded instead:
+   * **`manipulated`**: any of
+     * biosample `treatments` (anti-CD3/CD28 beads, IL-2, IL-4, IL-12/15/18, CpG, calcium,
+       polarizing cytokines and antibodies)
+     * `genetic_modifications` or `applied_modifications`
+     * a biosample or experiment `perturbed` flag
+     * a biosample term that by definition denotes an in vitro activated, stimulated or polarized
+       state ("activated …", "stimulated …", "inflammatory macrophage", "suppressor macrophage").
+       ENCODE records no `Treatment` for many UW samples of this kind, so the term itself is the
+       evidence.
+   * **`possibly_manipulated`**: T-helper, Treg and Tfh subsets with no recorded treatment. They
+     may have been sorted ex vivo or polarized in vitro.
+   * **`baseline`**: everything else.
+
+   `--exclude-manipulated` turns `manipulated` back into an exclusion reason.
 5. Library metadata is consistent with total RNA (or small RNA for Track C). Libraries depleted of
    polyadenylated RNA are rejected from the total track.
 6. At least one **released** gene-quantification TSV covering a single biological replicate.
@@ -131,13 +152,8 @@ recorded for every row. It is used to classify library type, not just the assay 
   cells/tissues.
 * **Immortalized, transformed, xenograft or iPSC descriptions** in biosample text, or a `host`
   organism.
-* **In-vitro treated or stimulated biosamples**: anti-CD3/CD28 beads, IL-2, IL-12/15/18, LPS,
-  CpG, calcium, polarizing cytokines, and so on.
-* **Biosample terms that by definition denote an in-vitro activated, stimulated or polarized
-  state** ("activated …", "stimulated …", "inflammatory macrophage", "suppressor macrophage").
-  ENCODE records no `Treatment` for many of these (UW). No untreated baseline exists within those
-  experiments, so they are excluded as manipulated. T-helper/Treg/Tfh subsets are kept but
-  flagged, because they may be sorted ex vivo or polarized in vitro.
+* **In-vitro treated, stimulated or polarized biosamples**, **only** when run with
+  `--exclude-manipulated`. By default they are included (see above).
 * **Other assays**, each with its own reason:
   * poly(A)+ libraries: vault RNAs are not polyadenylated.
   * poly(A)− fraction.
@@ -148,6 +164,10 @@ recorded for every row. It is used to classify library type, not just the assay 
   against silently skipping checks.
 
 **Not excluded:**
+
+* Experimentally manipulated primary cells/tissues: 119 total RNA-seq experiments and 127
+  samples are labelled `manipulated`. No small RNA-seq samples are manipulated. The
+  knockdown/CRISPR assays remain excluded, because every one of them uses cell lines.
 
 * Disease-annotated non-cancer tissue: dorsolateral prefrontal cortex from donors with
   Alzheimer's disease or (mild) cognitive impairment, and one coronary-artery-disease donor.
@@ -180,10 +200,10 @@ The GTFs were scanned for `gene_name` starting `VTRNA1-` and for the seed ID ENS
 Each quantification file was then matched by **version-stripped Ensembl ID**, using the IDs from
 its own annotation plus the union across annotations, and by a symbol column where one exists
 (none do). The original identifier is preserved in `VTRNA1_x_gene_id`. The identifiers are
-**identical across V19, V24 and V29**, and every one of the 936 parsed files contains all three
+**identical across V19, V24 and V29**, and every one of the 1,063 parsed files contains all three
 rows. Apparent absence is therefore never caused by an annotation change.
 
-For V43, ENCODE hosts no GTF. Gene symbols for those 299 files rely on the stable IDs being
+For V43, ENCODE hosts no GTF. Gene symbols for those 375 files rely on the stable IDs being
 unchanged, which is documented in `VTRNA1_x_gene_symbol_source` and in the audit.
 
 ## Biological vs technical replicates; choosing among multiple files
@@ -195,12 +215,12 @@ unchanged, which is documented in `VTRNA1_x_gene_symbol_source` and in the audit
   where one exists.
 * Within the chosen analysis, files covering more than one biological replicate (pooled) are not
   used. If one biological replicate has several files, ENCODE's **`preferred_default`** file is
-  kept, then the newest. This happens in 13 rows, where a biological replicate has several
+  kept, then the newest. This happens in 16 rows, where a biological replicate has several
   technical-replicate libraries each quantified separately (for example ENCSR584CVV, with 10
   technical replicates). The unused files are listed in `other_technical_replicate_files_not_selected`
   and in the manifest.
 * hg19 V19 / GRCh38 V24 outputs, reruns, archived and revoked files are all listed as
-  `alternate_file_not_selected` with a reason (593 total-RNA and 129 small-RNA alternate files).
+  `alternate_file_not_selected` with a reason (606 total-RNA and 129 small-RNA alternate files).
 * Library, fastq, read-length and platform metadata are restricted to the technical replicate(s)
   in the selected file.
 * No values are averaged.
@@ -229,17 +249,17 @@ out reverse for the UW files and forward for CSHL small RNA, matching library st
 |---|---|---|
 | ENCODE experiments queried (all 10 assay titles) | 4,052 | — |
 | Experiments with this assay | 1,650 | 176 |
-| Passing inclusion criteria | **725** | **91** |
+| Passing inclusion criteria | **844** (708 baseline, 17 possibly manipulated, 119 manipulated) | **91** (all baseline) |
 | Eligible but no usable quantification | 0 | 0 |
-| Unique biosample terms | 156 | 57 |
-| Unique donors | 297 | 53 |
-| Biological samples / files selected | 807 | 129 |
-| Downloaded (md5 OK) / parsed | 807 / 807 | 129 / 129 |
-| Files containing VTRNA1-1 / -2 / -3 rows | 807 / 807 / 807 | 129 / 129 / 129 |
-| Value > 0, VTRNA1-1 | TPM: 0/508; STAR count: 287/299 | 129/129 |
-| Value > 0, VTRNA1-2 | TPM: 0/508; STAR count: 30/299 | 114/129 |
-| Value > 0, VTRNA1-3 | TPM: 0/508; STAR count: 294/299 | 108/129 |
-| Annotations | GRCh38 V29 (RSEM, 508); GRCh38 V43 (STAR, 299) | GRCh38 V24 (129) |
+| Unique biosample terms | 172 | 57 |
+| Unique donors | 298 | 53 |
+| Biological samples / files selected | 934 (790 / 17 / 127) | 129 |
+| Downloaded (md5 OK) / parsed | 934 / 934 | 129 / 129 |
+| Files containing VTRNA1-1 / -2 / -3 rows | 934 / 934 / 934 | 129 / 129 / 129 |
+| Value > 0, VTRNA1-1 | TPM: 0/559; STAR count: 362/375 | 129/129 |
+| Value > 0, VTRNA1-2 | TPM: 0/559; STAR count: 57/375 | 114/129 |
+| Value > 0, VTRNA1-3 | TPM: 0/559; STAR count: 368/375 | 108/129 |
+| Annotations | GRCh38 V29 (RSEM, 559); GRCh38 V43 (STAR, 375) | GRCh38 V24 (129) |
 | Files with any gene missing | 0 | 0 |
 | Duplicate file / (experiment, bio-rep) / library / biosample rows | 0 / 0 / 0 / 0 | 0 / 0 / 0 / 0 |
 | Failed downloads | 0 | 0 |
@@ -253,16 +273,26 @@ Parsing sanity checks:
 
 ### Per-gene summary
 
-*Track A (RSEM TPM, n = 508):* every gene has median, mean and maximum TPM of 0, because the
+*Track A (RSEM TPM, n = 559; same for every manipulation subset):* every gene has median, mean and maximum TPM of 0, because the
 values are structural zeros (see above).
 
-*Track B (UW total RNA-seq, STAR unique-read CPM, n = 299 immune primary cells):*
+*Track B (UW total RNA-seq, STAR unique-read CPM, immune primary cells):*
 
-| Gene | n | n>0 | median | mean | max | max biosample |
-|---|---|---|---|---|---|---|
-| VTRNA1-1 | 299 | 287 | 0.39 | 0.65 | 5.09 | CD14-positive monocyte |
-| VTRNA1-2 | 299 | 30 | 0.00 | 0.007 | 0.27 | CD14-positive monocyte |
-| VTRNA1-3 | 299 | 294 | 1.27 | 1.67 | 11.74 | CD14-positive monocyte |
+| Subset | Gene | n | n>0 | median | mean | max | max biosample |
+|---|---|---|---|---|---|---|---|
+| all | VTRNA1-1 | 375 | 362 | 0.43 | 0.68 | 5.09 | CD14-positive monocyte |
+| all | VTRNA1-2 | 375 | 57 | 0.00 | 0.013 | 0.49 | suppressor macrophage |
+| all | VTRNA1-3 | 375 | 368 | 1.00 | 1.55 | 11.74 | CD14-positive monocyte |
+| baseline | VTRNA1-1 | 285 | 275 | 0.39 | 0.65 | 5.09 | CD14-positive monocyte |
+| baseline | VTRNA1-2 | 285 | 29 | 0.00 | 0.007 | 0.27 | CD14-positive monocyte |
+| baseline | VTRNA1-3 | 285 | 280 | 1.18 | 1.65 | 11.74 | CD14-positive monocyte |
+| manipulated | VTRNA1-1 | 76 | 75 | 0.59 | — | 3.89 | suppressor macrophage |
+| manipulated | VTRNA1-2 | 76 | 27 | 0.00 | — | 0.49 | suppressor macrophage |
+| manipulated | VTRNA1-3 | 76 | 74 | 0.66 | — | 5.75 | T-helper 1 cell |
+
+In vitro polarized macrophages (inflammatory n = 18, suppressor n = 17) have the highest
+VTRNA1-1 (median CPM 0.98 and 1.17) and VTRNA1-2 of any manipulated group, but lower VTRNA1-3
+(0.42 and 0.37) than T cells.
 
 *Track C (small RNA-seq, CPM, n = 129):*
 
@@ -297,7 +327,7 @@ and at the end of `qc_report.txt`.
    (VTRNA1-3 > VTRNA1-1) and Track C (VTRNA1-1 ≫ VTRNA1-2 > VTRNA1-3), probably for this reason
    and because of library chemistry.
 4. **Track B is immune cells only**, all from one lab, and is concentrated in a few donors.
-   * 44 donor × cell-type groups have several rows. ENCDO116ULP, ENCDO833KUM and ENCDO923WRX
+   * 76 donor × cell-type groups have several rows (441 rows in total). ENCDO116ULP, ENCDO833KUM and ENCDO923WRX
      contribute 38–47 CD4⁺ T-cell samples each.
    * These are distinct ENCODE biosamples, but ENCODE records no condition or time point that
      separates them.
@@ -312,8 +342,16 @@ and at the end of `qc_report.txt`.
 6. **Small RNA-seq (Track C)** is ENCODE2/3 CSHL data processed only against GRCh38 V24 and
    hg19. Its counts are not length-normalized, and its CPM is relative to the small-RNA
    composition of each library: miRNA, snoRNA and tRNA dominate and differ between tissues.
-7. **The Alzheimer's/MCI cortex samples** are included as primary tissue. Filter them on
+7. **Manipulated samples are not matched to their own baselines.**
+   * Same-donor baseline rows exist for all 47 Caltech and 65 of 76 UW manipulated samples
+     (link them by `donor_accession`). But for many UW activated or polarized samples, ENCODE
+     gives no treatment, dose or time.
+   * Treat `manipulated` rows as additional cell states, not as controlled perturbation
+     contrasts.
+   * Nearly all manipulated samples are immune cells; the other 4 are calcium-treated
+     keratinocytes.
+8. **The Alzheimer's/MCI cortex samples** are included as primary tissue. Filter them on
    `disease_term_name` if only non-disease tissue is wanted.
-8. **The classification depends on ENCODE metadata as of the query date.** Rerun with
+9. **The classification depends on ENCODE metadata as of the query date.** Rerun with
    `--refresh` to pick up new releases. `query_log.tsv` and `run_info.json` record each run.
-9. **VTRNA2-1 (nc886) is deliberately not reported.**
+10. **VTRNA2-1 (nc886) is deliberately not reported.**

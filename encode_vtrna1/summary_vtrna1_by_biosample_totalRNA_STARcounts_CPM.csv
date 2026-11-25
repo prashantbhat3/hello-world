@@ -1,18 +1,27 @@
-biosample_type,biosample_term_name,N_biological_samples,N_experiments,N_donors,median_CPM_VTRNA1_1,n_CPM_gt0_VTRNA1_1,median_CPM_VTRNA1_2,n_CPM_gt0_VTRNA1_2,median_CPM_VTRNA1_3,n_CPM_gt0_VTRNA1_3
-primary cell,CD14-positive monocyte,11,11,3,2.3777898004274185,11,0.0,4,2.0363210038037822,11
-primary cell,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",1,1,1,0.2819229854065386,1,0.0,0,1.409614927032693,1
-primary cell,"CD4-positive, alpha-beta T cell",173,173,5,0.3179929881637559,168,0.0,16,0.8589222081389117,171
-primary cell,"CD8-positive, alpha-beta T cell",44,44,3,0.5345518476084501,43,0.0,4,1.5313518503004417,43
-primary cell,T follicular helper cell,2,2,1,0.5460237910315715,2,0.0,0,2.174870089919589,2
-primary cell,T-cell,29,29,3,0.49072700174782236,27,0.0,4,1.1297873933803497,29
-primary cell,T-helper 1 cell,5,5,5,0.14516164620274555,3,0.0,0,2.177424693041183,5
-primary cell,T-helper 17 cell,2,2,2,0.9281031384156133,2,0.0,0,2.469985607859193,2
-primary cell,T-helper 2 cell,2,2,2,0.9102089450865047,2,0.03207286338762692,1,3.7768625568182514,2
-primary cell,T-helper 9 cell,2,2,2,0.6746703772414504,2,0.0,0,0.7889022040644641,2
-primary cell,"central memory CD4-positive, alpha-beta T cell",3,3,2,0.4730519854397302,3,0.0,0,3.2775744705467025,3
-primary cell,"effector CD4-positive, alpha-beta T cell",1,1,1,0.7111485333272649,1,0.0,0,1.600084199986346,1
-primary cell,"effector CD8-positive, alpha-beta T cell",4,4,3,0.6691573372079812,4,0.0,0,0.8505170144223637,4
-primary cell,"effector memory CD4-positive, alpha-beta T cell",3,3,3,0.3666865960831638,3,0.0,1,1.4060291190284704,3
-primary cell,"effector memory CD8-positive, alpha-beta T cell",9,9,5,0.5879688530448822,9,0.0,0,1.3897445617424489,9
-primary cell,"naive thymus-derived CD4-positive, alpha-beta T cell",1,1,1,0.0,0,0.0,0,0.0,0
-primary cell,"naive thymus-derived CD8-positive, alpha-beta T cell",7,7,5,0.27907314227986013,6,0.0,0,0.6055605394683166,6
+biosample_type,biosample_term_name,manipulation_status,N_biological_samples,N_experiments,N_donors,median_CPM_VTRNA1_1,n_CPM_gt0_VTRNA1_1,median_CPM_VTRNA1_2,n_CPM_gt0_VTRNA1_2,median_CPM_VTRNA1_3,n_CPM_gt0_VTRNA1_3,manipulation_details
+primary cell,CD14-positive monocyte,baseline,11,11,3,2.3777898004274185,11,0.0,4,2.0363210038037822,11,
+primary cell,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",possibly_manipulated,1,1,1,0.2819229854065386,1,0.0,0,1.409614927032693,1,"biosample term 'CD4-positive, CD25-positive, alpha-beta regulatory T cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment"
+primary cell,"CD4-positive, alpha-beta T cell",baseline,173,173,5,0.3179929881637559,168,0.0,16,0.8589222081389117,171,
+primary cell,"CD4-positive, alpha-beta T cell",manipulated,16,16,2,0.19507278509140885,15,0.0,1,0.29451614304491136,15,biosample treated in vitro (Interleukin-2);biosample treated in vitro (Interleukin-15)
+primary cell,"CD8-positive, alpha-beta T cell",baseline,44,44,3,0.5345518476084501,43,0.0,4,1.5313518503004417,43,
+primary cell,T follicular helper cell,possibly_manipulated,2,2,1,0.5460237910315715,2,0.0,0,2.174870089919589,2,biosample term 'T follicular helper cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment
+primary cell,T-cell,baseline,29,29,3,0.49072700174782236,27,0.0,4,1.1297873933803497,29,
+primary cell,T-cell,manipulated,7,7,3,0.25076214452036755,7,0.0,1,1.6590701813487074,7,"biosample treated in vitro (anti-CD3 and anti-CD28 coated beads);biosample treated in vitro (anti-CD3 and anti-CD28 coated beads, Interleukin-2)"
+primary cell,T-helper 1 cell,manipulated,2,2,1,0.8047156380870762,2,0.0,0,3.060215013282319,2,"biosample treated in vitro (Interleukin-2);biosample term 'T-helper 1 cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment;biosample treated in vitro (anti-CD3 and anti-CD28 coated beads, Interleukin-2)"
+primary cell,T-helper 1 cell,possibly_manipulated,5,5,5,0.14516164620274555,3,0.0,0,2.177424693041183,5,biosample term 'T-helper 1 cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment
+primary cell,T-helper 17 cell,possibly_manipulated,2,2,2,0.9281031384156133,2,0.0,0,2.469985607859193,2,biosample term 'T-helper 17 cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment
+primary cell,T-helper 2 cell,manipulated,2,2,1,1.1229663629337499,2,0.0,0,1.8982664361784463,2,"biosample treated in vitro (Interleukin-2);biosample term 'T-helper 2 cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment;biosample treated in vitro (anti-CD3 and anti-CD28 coated beads, Interleukin-2)"
+primary cell,T-helper 2 cell,possibly_manipulated,2,2,2,0.9102089450865047,2,0.03207286338762692,1,3.7768625568182514,2,biosample term 'T-helper 2 cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment
+primary cell,T-helper 9 cell,possibly_manipulated,2,2,2,0.6746703772414504,2,0.0,0,0.7889022040644641,2,biosample term 'T-helper 9 cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment
+primary cell,"activated effector memory CD4-positive, alpha-beta T cell",manipulated,6,6,3,0.3485406234913805,6,0.0,1,1.7904771110135407,6,"biosample term 'activated effector memory CD4-positive, alpha-beta T cell' denotes an in vitro activated/stimulated/polarized state (ENCODE lists no treatment)"
+primary cell,activated gamma-delta T cell,manipulated,2,2,2,0.5414188864846997,2,0.12440965029069352,1,0.88047466814687,2,biosample term 'activated gamma-delta T cell' denotes an in vitro activated/stimulated/polarized state (ENCODE lists no treatment)
+primary cell,"central memory CD4-positive, alpha-beta T cell",baseline,3,3,2,0.4730519854397302,3,0.0,0,3.2775744705467025,3,
+primary cell,"effector CD4-positive, alpha-beta T cell",baseline,1,1,1,0.7111485333272649,1,0.0,0,1.600084199986346,1,
+primary cell,"effector CD8-positive, alpha-beta T cell",baseline,4,4,3,0.6691573372079812,4,0.0,0,0.8505170144223637,4,
+primary cell,"effector memory CD4-positive, alpha-beta T cell",baseline,3,3,3,0.3666865960831638,3,0.0,1,1.4060291190284704,3,
+primary cell,"effector memory CD8-positive, alpha-beta T cell",baseline,9,9,5,0.5879688530448822,9,0.0,0,1.3897445617424489,9,
+primary cell,inflammatory macrophage,manipulated,18,18,4,0.9775479030857497,18,0.03290134597577071,10,0.41888912440469644,17,biosample term 'inflammatory macrophage' denotes an in vitro activated/stimulated/polarized state (ENCODE lists no treatment)
+primary cell,"naive thymus-derived CD4-positive, alpha-beta T cell",baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,"naive thymus-derived CD8-positive, alpha-beta T cell",baseline,7,7,5,0.27907314227986013,6,0.0,0,0.6055605394683166,6,
+primary cell,"stimulated activated CD4-positive, alpha-beta T cell",manipulated,6,6,3,0.4287478685666175,6,0.0,0,1.4359481561141978,6,"biosample term 'stimulated activated CD4-positive, alpha-beta T cell' denotes an in vitro activated/stimulated/polarized state (ENCODE lists no treatment)"
+primary cell,suppressor macrophage,manipulated,17,17,4,1.1743898457556377,17,0.04635287899817337,13,0.3706405948188522,17,biosample term 'suppressor macrophage' denotes an in vitro activated/stimulated/polarized state (ENCODE lists no treatment)

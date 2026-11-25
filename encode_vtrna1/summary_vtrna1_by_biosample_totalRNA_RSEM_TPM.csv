@@ -1,148 +1,163 @@
-biosample_type,biosample_term_name,N_biological_samples,N_experiments,N_donors,median_TPM_VTRNA1_1,n_TPM_gt0_VTRNA1_1,median_TPM_VTRNA1_2,n_TPM_gt0_VTRNA1_2,median_TPM_VTRNA1_3,n_TPM_gt0_VTRNA1_3
-primary cell,B cell,3,2,2,0.0,0,0.0,0,0.0,0
-primary cell,CD14-positive monocyte,1,1,1,0.0,0,0.0,0,0.0,0
-primary cell,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",1,1,1,0.0,0,0.0,0,0.0,0
-primary cell,"CD4-positive, alpha-beta T cell",2,2,1,0.0,0,0.0,0,0.0,0
-primary cell,"CD4-positive, alpha-beta memory T cell",2,2,1,0.0,0,0.0,0,0.0,0
-primary cell,"CD8-positive, alpha-beta T cell",2,2,1,0.0,0,0.0,0,0.0,0
-primary cell,"CD8-positive, alpha-beta memory T cell",2,2,1,0.0,0,0.0,0,0.0,0
-primary cell,T-cell,6,6,6,0.0,0,0.0,0,0.0,0
-primary cell,T-helper 17 cell,2,2,2,0.0,0,0.0,0,0.0,0
-primary cell,airway epithelial cell,2,1,1,0.0,0,0.0,0,0.0,0
-primary cell,aortic smooth muscle cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,articular chondrocyte of knee joint,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,astrocyte,2,1,1,0.0,0,0.0,0,0.0,0
-primary cell,bladder microvascular endothelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,bronchial epithelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,bronchial smooth muscle cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,bronchus fibroblast of lung,2,1,1,0.0,0,0.0,0,0.0,0
-primary cell,cardiac atrium fibroblast,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,cardiac ventricle fibroblast,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,dermis blood vessel endothelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,dermis lymphatic vessel endothelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,dermis microvascular lymphatic vessel endothelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,endometrial microvascular endothelial cells,2,1,1,0.0,0,0.0,0,0.0,0
-primary cell,endothelial cell of coronary artery,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,endothelial cell of umbilical vein,2,1,1,0.0,0,0.0,0,0.0,0
-primary cell,epithelial cell of alveolus of lung,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,epithelial cell of proximal tubule,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,epithelial cell of umbilical artery,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,fibroblast of dermis,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,fibroblast of lung,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,fibroblast of the aortic adventitia,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,fibroblast of villous mesenchyme,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,foreskin keratinocyte,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,glomerular endothelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,hair follicle dermal papilla cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,hair follicular keratinocyte,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,kidney epithelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,lung microvascular endothelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,mammary epithelial cell,3,2,2,0.0,0,0.0,0,0.0,0
-primary cell,mammary microvascular endothelial cell,2,1,1,0.0,0,0.0,0,0.0,0
-primary cell,melanocyte of skin,4,2,4,0.0,0,0.0,0,0.0,0
-primary cell,mesangial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,mesenchymal stem cell of Wharton's jelly,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,mesenchymal stem cell of adipose,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,mesenchymal stem cell of the bone marrow,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,mononuclear cell,1,1,1,0.0,0,0.0,0,0.0,0
-primary cell,myometrial cell,2,1,1,0.0,0,0.0,0,0.0,0
-primary cell,"naive thymus-derived CD4-positive, alpha-beta T cell",6,5,4,0.0,0,0.0,0,0.0,0
-primary cell,"naive thymus-derived CD8-positive, alpha-beta T cell",2,2,1,0.0,0,0.0,0,0.0,0
-primary cell,nasal cavity respiratory epithelium epithelial cell of viscerocranial mucosa,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,natural killer cell,4,4,4,0.0,0,0.0,0,0.0,0
-primary cell,osteoblast,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,pericardium fibroblast,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,placental epithelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,placental pericyte,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,pulmonary artery endothelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,regular cardiac myocyte,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,renal cortical epithelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,skeletal muscle myoblast,2,1,1,0.0,0,0.0,0,0.0,0
-primary cell,skeletal muscle satellite cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,smooth muscle cell of bladder,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,smooth muscle cell of the coronary artery,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,smooth muscle cell of the pulmonary artery,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,smooth muscle cell of the umbilical artery,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,smooth muscle cell of trachea,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,subcutaneous preadipocyte,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,thoracic aorta endothelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,tracheal epithelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,uterine smooth muscle cell,2,1,2,0.0,0,0.0,0,0.0,0
-primary cell,vein endothelial cell,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,Peyer's patch,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,Right ventricle myocardium inferior,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,Right ventricle myocardium superior,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,adrenal gland,9,9,9,0.0,0,0.0,0,0.0,0
-tissue,aorta,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,ascending aorta,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,body of pancreas,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,breast epithelium,3,3,3,0.0,0,0.0,0,0.0,0
-tissue,camera-type eye,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,cardiac septum,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,cerebellum,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,colonic mucosa,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,diencephalon,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,dorsolateral prefrontal cortex,121,120,118,0.0,0,0.0,0,0.0,0
-tissue,esophagus mucosa,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,esophagus muscularis mucosa,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,esophagus squamous epithelium,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,frontal cortex,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,gastrocnemius medialis,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,gastroesophageal sphincter,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,heart,3,2,3,0.0,0,0.0,0,0.0,0
-tissue,heart left ventricle,9,9,9,0.0,0,0.0,0,0.0,0
-tissue,heart right ventricle,10,10,10,0.0,0,0.0,0,0.0,0
-tissue,kidney,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,left cardiac atrium,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,left colon,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,left lobe of liver,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,left lung,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,left ventricle myocardium inferior,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,left ventricle myocardium superior,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,liver,4,2,4,0.0,0,0.0,0,0.0,0
-tissue,lower leg skin,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,lower lobe of left lung,3,3,3,0.0,0,0.0,0,0.0,0
-tissue,lower lobe of right lung,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,lung,3,2,3,0.0,0,0.0,0,0.0,0
-tissue,mesenteric fat pad,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,metanephros,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,mucosa of descending colon,3,3,3,0.0,0,0.0,0,0.0,0
-tissue,mucosa of gallbladder,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,muscle of leg,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,muscle of trunk,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,occipital lobe,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,omental fat pad,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,ovary,7,7,7,0.0,0,0.0,0,0.0,0
-tissue,pancreas,6,6,6,0.0,0,0.0,0,0.0,0
-tissue,parietal lobe,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,placenta,13,13,12,0.0,0,0.0,0,0.0,0
-tissue,posterior vena cava,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,prostate gland,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,psoas muscle,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,right atrium auricular region,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,right cardiac atrium,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,right lobe of liver,6,6,5,0.0,0,0.0,0,0.0,0
-tissue,sciatic nerve,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,sigmoid colon,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,skeletal muscle tissue,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,skin of body,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,spinal cord,3,2,3,0.0,0,0.0,0,0.0,0
-tissue,spleen,8,8,8,0.0,0,0.0,0,0.0,0
-tissue,stomach,6,5,6,0.0,0,0.0,0,0.0,0
-tissue,subcutaneous adipose tissue,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,suprapubic skin,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,temporal lobe,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,testis,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,thoracic aorta,2,2,2,0.0,0,0.0,0,0.0,0
-tissue,thymus,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,thyroid gland,6,5,6,0.0,0,0.0,0,0.0,0
-tissue,tibial nerve,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,tongue,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,transverse colon,4,4,4,0.0,0,0.0,0,0.0,0
-tissue,umbilical cord,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,upper lobe of left lung,6,6,6,0.0,0,0.0,0,0.0,0
-tissue,upper lobe of right lung,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,ureter,1,1,1,0.0,0,0.0,0,0.0,0
-tissue,urinary bladder,2,1,2,0.0,0,0.0,0,0.0,0
-tissue,uterus,5,4,5,0.0,0,0.0,0,0.0,0
-tissue,vagina,1,1,1,0.0,0,0.0,0,0.0,0
+biosample_type,biosample_term_name,manipulation_status,N_biological_samples,N_experiments,N_donors,median_TPM_VTRNA1_1,n_TPM_gt0_VTRNA1_1,median_TPM_VTRNA1_2,n_TPM_gt0_VTRNA1_2,median_TPM_VTRNA1_3,n_TPM_gt0_VTRNA1_3,manipulation_details
+primary cell,B cell,baseline,3,2,2,0.0,0,0.0,0,0.0,0,
+primary cell,CD14-positive monocyte,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,"CD4-positive, CD25-positive, alpha-beta regulatory T cell",possibly_manipulated,1,1,1,0.0,0,0.0,0,0.0,0,"biosample term 'CD4-positive, CD25-positive, alpha-beta regulatory T cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment"
+primary cell,"CD4-positive, alpha-beta T cell",baseline,2,2,1,0.0,0,0.0,0,0.0,0,
+primary cell,"CD4-positive, alpha-beta memory T cell",baseline,2,2,1,0.0,0,0.0,0,0.0,0,
+primary cell,"CD8-positive, alpha-beta T cell",baseline,2,2,1,0.0,0,0.0,0,0.0,0,
+primary cell,"CD8-positive, alpha-beta memory T cell",baseline,2,2,1,0.0,0,0.0,0,0.0,0,
+primary cell,T-cell,baseline,6,6,6,0.0,0,0.0,0,0.0,0,
+primary cell,T-helper 1 cell,manipulated,2,1,1,0.0,0,0.0,0,0.0,0,"biosample treated in vitro (Interleukin-12 subunit beta, Interleukin-12 subunit alpha, Interleukin-4 antibody);biosample term 'T-helper 1 cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment"
+primary cell,T-helper 17 cell,possibly_manipulated,2,2,2,0.0,0,0.0,0,0.0,0,biosample term 'T-helper 17 cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment
+primary cell,T-helper 2 cell,manipulated,2,1,1,0.0,0,0.0,0,0.0,0,"biosample treated in vitro (Interleukin-4, Interferon-gamma antibody);biosample term 'T-helper 2 cell' may reflect ex vivo sorting or in vitro polarization;ENCODE records no treatment"
+primary cell,activated B cell,manipulated,2,1,1,0.0,0,0.0,0,0.0,0,biosample term 'activated B cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (CpG ODN)
+primary cell,"activated CD4-positive, alpha-beta T cell",manipulated,6,5,2,0.0,0,0.0,0,0.0,0,"biosample term 'activated CD4-positive, alpha-beta T cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (Interleukin-2, anti-CD3 and anti-CD28 coated beads);biosample treated in vitro (anti-CD3 and anti-CD28 coated beads)"
+primary cell,"activated CD4-positive, alpha-beta memory T cell",manipulated,4,4,1,0.0,0,0.0,0,0.0,0,"biosample term 'activated CD4-positive, alpha-beta memory T cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (Interleukin-2, anti-CD3 and anti-CD28 coated beads);biosample treated in vitro (anti-CD3 and anti-CD28 coated beads)"
+primary cell,"activated CD8-positive, alpha-beta T cell",manipulated,4,4,1,0.0,0,0.0,0,0.0,0,"biosample term 'activated CD8-positive, alpha-beta T cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (anti-CD3 and anti-CD28 coated beads);biosample treated in vitro (Interleukin-2, anti-CD3 and anti-CD28 coated beads)"
+primary cell,"activated CD8-positive, alpha-beta memory T cell",manipulated,4,4,1,0.0,0,0.0,0,0.0,0,"biosample term 'activated CD8-positive, alpha-beta memory T cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (Interleukin-2, anti-CD3 and anti-CD28 coated beads);biosample treated in vitro (anti-CD3 and anti-CD28 coated beads)"
+primary cell,activated T-cell,manipulated,5,5,5,0.0,0,0.0,0,0.0,0,"biosample term 'activated T-cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (Interleukin-2, anti-CD3 and anti-CD28 coated beads)"
+primary cell,activated T-helper 1 cell,manipulated,2,1,1,0.0,0,0.0,0,0.0,0,"biosample term 'activated T-helper 1 cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (anti-CD3 and anti-CD28 coated beads, Interleukin-12 subunit beta, Interleukin-2, Interleukin-4 antibody, Interleukin-12 subunit alpha)"
+primary cell,activated T-helper 17 cell,manipulated,2,2,2,0.0,0,0.0,0,0.0,0,"biosample term 'activated T-helper 17 cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (Interleukin-2, anti-CD3 and anti-CD28 coated beads)"
+primary cell,activated T-helper 2 cell,manipulated,2,1,1,0.0,0,0.0,0,0.0,0,"biosample term 'activated T-helper 2 cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (Interferon-gamma antibody, anti-CD3 and anti-CD28 coated beads, Interleukin-2, Interleukin-4)"
+primary cell,"activated naive CD4-positive, alpha-beta T cell",manipulated,6,6,3,0.0,0,0.0,0,0.0,0,"biosample term 'activated naive CD4-positive, alpha-beta T cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (anti-CD3 and anti-CD28 coated beads, Interleukin-2);biosample treated in vitro (Interleukin-2, anti-CD3 and anti-CD28 coated beads);biosample treated in vitro (anti-CD3 and anti-CD28 coated beads)"
+primary cell,"activated naive CD8-positive, alpha-beta T cell",manipulated,4,4,1,0.0,0,0.0,0,0.0,0,"biosample term 'activated naive CD8-positive, alpha-beta T cell' denotes an in vitro activated/stimulated/polarized state;biosample treated in vitro (anti-CD3 and anti-CD28 coated beads);biosample treated in vitro (Interleukin-2, anti-CD3 and anti-CD28 coated beads)"
+primary cell,airway epithelial cell,baseline,2,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,aortic smooth muscle cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,articular chondrocyte of knee joint,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,astrocyte,baseline,2,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,bladder microvascular endothelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,bronchial epithelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,bronchial smooth muscle cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,bronchus fibroblast of lung,baseline,2,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,cardiac atrium fibroblast,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,cardiac ventricle fibroblast,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,dermis blood vessel endothelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,dermis lymphatic vessel endothelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,dermis microvascular lymphatic vessel endothelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,endometrial microvascular endothelial cells,baseline,2,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,endothelial cell of coronary artery,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,endothelial cell of umbilical vein,baseline,2,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,epithelial cell of alveolus of lung,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,epithelial cell of proximal tubule,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,epithelial cell of umbilical artery,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,fibroblast of dermis,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,fibroblast of lung,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,fibroblast of the aortic adventitia,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,fibroblast of villous mesenchyme,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,foreskin keratinocyte,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,foreskin keratinocyte,manipulated,4,2,2,0.0,0,0.0,0,0.0,0,experiment flagged perturbed=true by ENCODE;biosample treated in vitro (calcium);biosample flagged perturbed
+primary cell,glomerular endothelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,hair follicle dermal papilla cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,hair follicular keratinocyte,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,kidney epithelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,lung microvascular endothelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,mammary epithelial cell,baseline,3,2,2,0.0,0,0.0,0,0.0,0,
+primary cell,mammary microvascular endothelial cell,baseline,2,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,melanocyte of skin,baseline,4,2,4,0.0,0,0.0,0,0.0,0,
+primary cell,mesangial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,mesenchymal stem cell of Wharton's jelly,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,mesenchymal stem cell of adipose,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,mesenchymal stem cell of the bone marrow,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,mononuclear cell,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,myometrial cell,baseline,2,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,"naive thymus-derived CD4-positive, alpha-beta T cell",baseline,6,5,4,0.0,0,0.0,0,0.0,0,
+primary cell,"naive thymus-derived CD8-positive, alpha-beta T cell",baseline,2,2,1,0.0,0,0.0,0,0.0,0,
+primary cell,nasal cavity respiratory epithelium epithelial cell of viscerocranial mucosa,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,natural killer cell,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+primary cell,natural killer cell,manipulated,2,2,2,0.0,0,0.0,0,0.0,0,"biosample treated in vitro (Interleukin-12 subunit alpha, Interleukin-15, Interleukin-12 subunit beta, Interleukin-18)"
+primary cell,osteoblast,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,pericardium fibroblast,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,placental epithelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,placental pericyte,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,pulmonary artery endothelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,regular cardiac myocyte,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,renal cortical epithelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,skeletal muscle myoblast,baseline,2,1,1,0.0,0,0.0,0,0.0,0,
+primary cell,skeletal muscle satellite cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,smooth muscle cell of bladder,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,smooth muscle cell of the coronary artery,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,smooth muscle cell of the pulmonary artery,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,smooth muscle cell of the umbilical artery,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,smooth muscle cell of trachea,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,subcutaneous preadipocyte,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,thoracic aorta endothelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,tracheal epithelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,uterine smooth muscle cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+primary cell,vein endothelial cell,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,Peyer's patch,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,Right ventricle myocardium inferior,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,Right ventricle myocardium superior,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,adrenal gland,baseline,9,9,9,0.0,0,0.0,0,0.0,0,
+tissue,aorta,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,ascending aorta,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,body of pancreas,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,breast epithelium,baseline,3,3,3,0.0,0,0.0,0,0.0,0,
+tissue,camera-type eye,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,cardiac septum,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,cerebellum,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,colonic mucosa,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,diencephalon,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,dorsolateral prefrontal cortex,baseline,121,120,118,0.0,0,0.0,0,0.0,0,
+tissue,esophagus mucosa,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,esophagus muscularis mucosa,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,esophagus squamous epithelium,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,frontal cortex,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,gastrocnemius medialis,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,gastroesophageal sphincter,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,heart,baseline,3,2,3,0.0,0,0.0,0,0.0,0,
+tissue,heart left ventricle,baseline,9,9,9,0.0,0,0.0,0,0.0,0,
+tissue,heart right ventricle,baseline,10,10,10,0.0,0,0.0,0,0.0,0,
+tissue,kidney,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,left cardiac atrium,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,left colon,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,left lobe of liver,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,left lung,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,left ventricle myocardium inferior,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,left ventricle myocardium superior,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,liver,baseline,4,2,4,0.0,0,0.0,0,0.0,0,
+tissue,lower leg skin,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,lower lobe of left lung,baseline,3,3,3,0.0,0,0.0,0,0.0,0,
+tissue,lower lobe of right lung,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,lung,baseline,3,2,3,0.0,0,0.0,0,0.0,0,
+tissue,mesenteric fat pad,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,metanephros,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,mucosa of descending colon,baseline,3,3,3,0.0,0,0.0,0,0.0,0,
+tissue,mucosa of gallbladder,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,muscle of leg,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,muscle of trunk,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,occipital lobe,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,omental fat pad,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,ovary,baseline,7,7,7,0.0,0,0.0,0,0.0,0,
+tissue,pancreas,baseline,6,6,6,0.0,0,0.0,0,0.0,0,
+tissue,parietal lobe,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,placenta,baseline,13,13,12,0.0,0,0.0,0,0.0,0,
+tissue,posterior vena cava,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,prostate gland,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,psoas muscle,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,right atrium auricular region,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,right cardiac atrium,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,right lobe of liver,baseline,6,6,5,0.0,0,0.0,0,0.0,0,
+tissue,sciatic nerve,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,sigmoid colon,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,skeletal muscle tissue,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,skin of body,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,spinal cord,baseline,3,2,3,0.0,0,0.0,0,0.0,0,
+tissue,spleen,baseline,8,8,8,0.0,0,0.0,0,0.0,0,
+tissue,stomach,baseline,6,5,6,0.0,0,0.0,0,0.0,0,
+tissue,subcutaneous adipose tissue,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,suprapubic skin,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,temporal lobe,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,testis,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,thoracic aorta,baseline,2,2,2,0.0,0,0.0,0,0.0,0,
+tissue,thymus,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,thyroid gland,baseline,6,5,6,0.0,0,0.0,0,0.0,0,
+tissue,tibial nerve,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,tongue,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,transverse colon,baseline,4,4,4,0.0,0,0.0,0,0.0,0,
+tissue,umbilical cord,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,upper lobe of left lung,baseline,6,6,6,0.0,0,0.0,0,0.0,0,
+tissue,upper lobe of right lung,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,ureter,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
+tissue,urinary bladder,baseline,2,1,2,0.0,0,0.0,0,0.0,0,
+tissue,uterus,baseline,5,4,5,0.0,0,0.0,0,0.0,0,
+tissue,vagina,baseline,1,1,1,0.0,0,0.0,0,0.0,0,
